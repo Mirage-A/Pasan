@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -33,7 +34,7 @@ public class main_menu extends JPanel{
 	int cloudkol=5;
 	int xxx=0;
 	Image cloud[] = new Image[10];
-	int cloudpos[][] = new int[15][3]; // Первая цифра - номер облака, вторая - 0-х, 1-у, 2-номер модельки
+	int cloudpos[][] = new int[15][3]; // ГЏГҐГ°ГўГ Гї Г¶ГЁГґГ°Г  - Г­Г®Г¬ГҐГ° Г®ГЎГ«Г ГЄГ , ГўГІГ®Г°Г Гї - 0-Гµ, 1-Гі, 2-Г­Г®Г¬ГҐГ° Г¬Г®Г¤ГҐГ«ГјГЄГЁ
 	int scrW,scrH;
 	int CampFinished;
 	JLabel mes,head;
