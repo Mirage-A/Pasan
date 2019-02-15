@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -46,37 +47,37 @@ public class editor extends JFrame{
 		public void keyPressed(KeyEvent e){
 			int key_ = e.getKeyCode();
 			if(gameY.inMessage==0){
-			if(key_==37){//Влево
+			if(key_==37){//Г‚Г«ГҐГўГ®
 				if(ram-ram/15*15>0){
 					ram-=1;
 					gameY.ram=ram;
 				}
 			}
-			else if(key_==38){//Вверх
+			else if(key_==38){//Г‚ГўГҐГ°Гµ
 				if(ram/15>0){
 					ram-=15;
 					gameY.ram=ram;
 				}
 			}
-			else if(key_==39){//Вправо
+			else if(key_==39){//Г‚ГЇГ°Г ГўГ®
 				if(ram-ram/15*15<14){
 					ram+=1;
 					gameY.ram=ram;
 				}
 			}
-			else if(key_==40){//Вниз
+			else if(key_==40){//Г‚Г­ГЁГ§
 				if(ram/15<9){
 					ram+=15;
 					gameY.ram=ram;
 				}
 			}
-			else if((key_==32)|(key_==10)){//Пробел
+			else if((key_==32)|(key_==10)){//ГЏГ°Г®ГЎГҐГ«
 					gameY.inMessage=1;
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(true);
-					gameY.head.setText("Изменение клетки");
-					gameY.mes.setText("<html>Введите номер клетки:<br>0-Стартовая точка (только одна)<br>1-Трава 2-Дерево 3-Дорога<br>4-Сокровище 5-Противник<br>6-Конечная точка (только одна)</html>");
+					gameY.head.setText("Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ ГЄГ«ГҐГІГЄГЁ");
+					gameY.mes.setText("<html>Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° ГЄГ«ГҐГІГЄГЁ:<br>0-Г‘ГІГ Г°ГІГ®ГўГ Гї ГІГ®Г·ГЄГ  (ГІГ®Г«ГјГЄГ® Г®Г¤Г­Г )<br>1-Г’Г°Г ГўГ  2-Г„ГҐГ°ГҐГўГ® 3-Г„Г®Г°Г®ГЈГ <br>4-Г‘Г®ГЄГ°Г®ГўГЁГ№ГҐ 5-ГЏГ°Г®ГІГЁГўГ­ГЁГЄ<br>6-ГЉГ®Г­ГҐГ·Г­Г Гї ГІГ®Г·ГЄГ  (ГІГ®Г«ГјГЄГ® Г®Г¤Г­Г )</html>");
 					gameY.textField.setText("");
 					gameY.textField.requestFocus();
 					gameY.textField.addKeyListener(keylis1);
@@ -90,8 +91,8 @@ public class editor extends JFrame{
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(false);
-					gameY.head.setText("Выход из редактора");
-					gameY.mes.setText("<html>Покинуть редактор?</html>");
+					gameY.head.setText("Г‚Г»ГµГ®Г¤ ГЁГ§ Г°ГҐГ¤Г ГЄГІГ®Г°Г ");
+					gameY.mes.setText("<html>ГЏГ®ГЄГЁГ­ГіГІГј Г°ГҐГ¤Г ГЄГІГ®Г°?</html>");
 				
 				}
 				else{
@@ -99,8 +100,8 @@ public class editor extends JFrame{
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(false);
-					gameY.head.setText("Выход из редактора");
-					gameY.mes.setText("<html>На карте нет стартовой или конечной точки.<br>Карта не будет сохранена.<br>Покинуть редактор?</html>");
+					gameY.head.setText("Г‚Г»ГµГ®Г¤ ГЁГ§ Г°ГҐГ¤Г ГЄГІГ®Г°Г ");
+					gameY.mes.setText("<html>ГЌГ  ГЄГ Г°ГІГҐ Г­ГҐГІ Г±ГІГ Г°ГІГ®ГўГ®Г© ГЁГ«ГЁ ГЄГ®Г­ГҐГ·Г­Г®Г© ГІГ®Г·ГЄГЁ.<br>ГЉГ Г°ГІГ  Г­ГҐ ГЎГіГ¤ГҐГІ Г±Г®ГµГ°Г Г­ГҐГ­Г .<br>ГЏГ®ГЄГЁГ­ГіГІГј Г°ГҐГ¤Г ГЄГІГ®Г°?</html>");
 				}
 			}
 			else if (key_==KeyEvent.VK_S){
@@ -109,16 +110,16 @@ public class editor extends JFrame{
 				gameY.mes.setVisible(true);
 				gameY.head.setVisible(true);
 				gameY.textField.setVisible(false);
-				gameY.head.setText("Сохранение карты");
-				gameY.mes.setText("<html>Сохранить карту?</html>");
+				gameY.head.setText("Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ ГЄГ Г°ГІГ»");
+				gameY.mes.setText("<html>Г‘Г®ГµГ°Г Г­ГЁГІГј ГЄГ Г°ГІГі?</html>");
 				}
 				else{
 					gameY.inMessage=13;
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(false);
-					gameY.head.setText("Сохранение карты");
-					gameY.mes.setText("<html>Разместите на карте стартовую и конечную точку, чтобы сохранить её.</html>");
+					gameY.head.setText("Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ ГЄГ Г°ГІГ»");
+					gameY.mes.setText("<html>ГђГ Г§Г¬ГҐГ±ГІГЁГІГҐ Г­Г  ГЄГ Г°ГІГҐ Г±ГІГ Г°ГІГ®ГўГіГѕ ГЁ ГЄГ®Г­ГҐГ·Г­ГіГѕ ГІГ®Г·ГЄГі, Г·ГІГ®ГЎГ» Г±Г®ГµГ°Г Г­ГЁГІГј ГҐВё.</html>");
 					
 				}
 			}
@@ -159,8 +160,8 @@ public class editor extends JFrame{
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(false);
-					gameY.head.setText("Выход из редактора");
-					gameY.mes.setText("<html>Сохранить изменения?</html>");
+					gameY.head.setText("Г‚Г»ГµГ®Г¤ ГЁГ§ Г°ГҐГ¤Г ГЄГІГ®Г°Г ");
+					gameY.mes.setText("<html>Г‘Г®ГµГ°Г Г­ГЁГІГј ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї?</html>");
 				}
 			}
 			else if(key_==27){
@@ -216,8 +217,8 @@ public class editor extends JFrame{
 				gameY.mes.setVisible(true);
 				gameY.head.setVisible(true);
 				gameY.textField.setVisible(false);
-				gameY.head.setText("Сохранение карты");
-				gameY.mes.setText("<html>Карта успешно сохранена.</html>");
+				gameY.head.setText("Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ ГЄГ Г°ГІГ»");
+				gameY.mes.setText("<html>ГЉГ Г°ГІГ  ГіГ±ГЇГҐГёГ­Г® Г±Г®ГµГ°Г Г­ГҐГ­Г .</html>");
 				saveMap();
 				saved=true;
 			}
@@ -283,8 +284,8 @@ public class editor extends JFrame{
 								gameY.mes.setVisible(true);
 								gameY.head.setVisible(true);
 								gameY.textField.setVisible(false);
-								gameY.head.setText("Стартовая точка");
-								gameY.mes.setText("<html>На этой карте уже есть стартовая точка.<br>Переместить её в эту клетку?</html>");
+								gameY.head.setText("Г‘ГІГ Г°ГІГ®ГўГ Гї ГІГ®Г·ГЄГ ");
+								gameY.mes.setText("<html>ГЌГ  ГЅГІГ®Г© ГЄГ Г°ГІГҐ ГіГ¦ГҐ ГҐГ±ГІГј Г±ГІГ Г°ГІГ®ГўГ Гї ГІГ®Г·ГЄГ .<br>ГЏГҐГ°ГҐГ¬ГҐГ±ГІГЁГІГј ГҐВё Гў ГЅГІГі ГЄГ«ГҐГІГЄГі?</html>");
 								requestFocus();
 								gameY.textField.removeKeyListener(keylis1);
 							}
@@ -352,8 +353,8 @@ public class editor extends JFrame{
 							gameY.mes.setVisible(true);
 							gameY.head.setVisible(true);
 							gameY.textField.setVisible(true);
-							gameY.head.setText("Размещение противника");
-							gameY.mes.setText("<html>Введите номер оружия противника:<br>0-Без оружия (ближний бой)<br>1-Меч (ближний бой)<br>2-Парные клинки (ближний бой)<br>3-Лук (дальний бой)</html>");
+							gameY.head.setText("ГђГ Г§Г¬ГҐГ№ГҐГ­ГЁГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ ");
+							gameY.mes.setText("<html>Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г®Г°ГіГ¦ГЁГї ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ :<br>0-ГЃГҐГ§ Г®Г°ГіГ¦ГЁГї (ГЎГ«ГЁГ¦Г­ГЁГ© ГЎГ®Г©)<br>1-ГЊГҐГ· (ГЎГ«ГЁГ¦Г­ГЁГ© ГЎГ®Г©)<br>2-ГЏГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ (ГЎГ«ГЁГ¦Г­ГЁГ© ГЎГ®Г©)<br>3-Г‹ГіГЄ (Г¤Г Г«ГјГ­ГЁГ© ГЎГ®Г©)</html>");
 							gameY.textField.setText("");
 							gameY.textField.requestFocus();
 							gameY.textField.addKeyListener(keylis2);
@@ -377,8 +378,8 @@ public class editor extends JFrame{
 								gameY.mes.setVisible(true);
 								gameY.head.setVisible(true);
 								gameY.textField.setVisible(false);
-								gameY.head.setText("Конечная точка");
-								gameY.mes.setText("<html>На этой карте уже есть конечная точка.<br>Переместить её в эту клетку?</html>");
+								gameY.head.setText("ГЉГ®Г­ГҐГ·Г­Г Гї ГІГ®Г·ГЄГ ");
+								gameY.mes.setText("<html>ГЌГ  ГЅГІГ®Г© ГЄГ Г°ГІГҐ ГіГ¦ГҐ ГҐГ±ГІГј ГЄГ®Г­ГҐГ·Г­Г Гї ГІГ®Г·ГЄГ .<br>ГЏГҐГ°ГҐГ¬ГҐГ±ГІГЁГІГј ГҐВё Гў ГЅГІГі ГЄГ«ГҐГІГЄГі?</html>");
 								gameY.textField.removeKeyListener(keylis1);
 								requestFocus();
 							}
@@ -388,8 +389,8 @@ public class editor extends JFrame{
 							gameY.mes.setVisible(true);
 							gameY.head.setVisible(true);
 							gameY.textField.setVisible(false);
-							gameY.head.setText("Ошибка");
-							gameY.mes.setText("<html>Данные введены неверно.</html>");
+							gameY.head.setText("ГЋГёГЁГЎГЄГ ");
+							gameY.mes.setText("<html>Г„Г Г­Г­Г»ГҐ ГўГўГҐГ¤ГҐГ­Г» Г­ГҐГўГҐГ°Г­Г®.</html>");
 							gameY.textField.removeKeyListener(keylis1);
 							requestFocus();
 						}
@@ -414,8 +415,8 @@ public class editor extends JFrame{
 						gameY.mes.setVisible(true);
 						gameY.head.setVisible(true);
 						gameY.textField.setVisible(true);
-						gameY.head.setText("Размещение противника");
-						gameY.mes.setText("<html>Введите номер брони противника:<br>(броня не влияет на защиту противников)<br>0-Без брони<br>1-Кожаная броня<br>2-Железная броня<br>3-Золотая броня</html>");
+						gameY.head.setText("ГђГ Г§Г¬ГҐГ№ГҐГ­ГЁГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ ");
+						gameY.mes.setText("<html>Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° ГЎГ°Г®Г­ГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ :<br>(ГЎГ°Г®Г­Гї Г­ГҐ ГўГ«ГЁГїГҐГІ Г­Г  Г§Г Г№ГЁГІГі ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ®Гў)<br>0-ГЃГҐГ§ ГЎГ°Г®Г­ГЁ<br>1-ГЉГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї<br>2-Г†ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї<br>3-Г‡Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї</html>");
 						gameY.textField.setText("");
 						gameY.textField.requestFocus();
 						gameY.textField.addKeyListener(keylis3);
@@ -426,8 +427,8 @@ public class editor extends JFrame{
 						gameY.mes.setVisible(true);
 						gameY.head.setVisible(true);
 						gameY.textField.setVisible(false);
-						gameY.head.setText("Ошибка");
-						gameY.mes.setText("<html>Данные введены неверно.</html>");
+						gameY.head.setText("ГЋГёГЁГЎГЄГ ");
+						gameY.mes.setText("<html>Г„Г Г­Г­Г»ГҐ ГўГўГҐГ¤ГҐГ­Г» Г­ГҐГўГҐГ°Г­Г®.</html>");
 						gameY.textField.setText("");
 						gameY.textField.removeKeyListener(keylis2);
 						requestFocus();
@@ -454,8 +455,8 @@ public class editor extends JFrame{
 						gameY.mes.setVisible(true);
 						gameY.head.setVisible(true);
 						gameY.textField.setVisible(true);
-						gameY.head.setText("Размещение противника");
-						gameY.mes.setText("<html>Введите урон, наносимый противником:<br>(число от 0 до 999)</html>");
+						gameY.head.setText("ГђГ Г§Г¬ГҐГ№ГҐГ­ГЁГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ ");
+						gameY.mes.setText("<html>Г‚ГўГҐГ¤ГЁГІГҐ ГіГ°Г®Г­, Г­Г Г­Г®Г±ГЁГ¬Г»Г© ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ®Г¬:<br>(Г·ГЁГ±Г«Г® Г®ГІ 0 Г¤Г® 999)</html>");
 						gameY.textField.setText("");
 						gameY.textField.requestFocus();
 						gameY.textField.addKeyListener(keylis4);
@@ -466,8 +467,8 @@ public class editor extends JFrame{
 						gameY.mes.setVisible(true);
 						gameY.head.setVisible(true);
 						gameY.textField.setVisible(false);
-						gameY.head.setText("Ошибка");
-						gameY.mes.setText("<html>Данные введены неверно.</html>");
+						gameY.head.setText("ГЋГёГЁГЎГЄГ ");
+						gameY.mes.setText("<html>Г„Г Г­Г­Г»ГҐ ГўГўГҐГ¤ГҐГ­Г» Г­ГҐГўГҐГ°Г­Г®.</html>");
 						gameY.textField.setText("");
 						gameY.textField.removeKeyListener(keylis3);
 						requestFocus();
@@ -510,8 +511,8 @@ public class editor extends JFrame{
 							gameY.mes.setVisible(true);
 							gameY.head.setVisible(true);
 							gameY.textField.setVisible(false);
-							gameY.head.setText("Ошибка");
-							gameY.mes.setText("<html>Данные введены неверно.</html>");
+							gameY.head.setText("ГЋГёГЁГЎГЄГ ");
+							gameY.mes.setText("<html>Г„Г Г­Г­Г»ГҐ ГўГўГҐГ¤ГҐГ­Г» Г­ГҐГўГҐГ°Г­Г®.</html>");
 							gameY.textField.setText("");
 							gameY.textField.removeKeyListener(keylis4);
 							requestFocus();
@@ -523,8 +524,8 @@ public class editor extends JFrame{
 					gameY.mes.setVisible(true);
 					gameY.head.setVisible(true);
 					gameY.textField.setVisible(true);
-					gameY.head.setText("Размещение противника");
-					gameY.mes.setText("<html>Введите максимальное здоровье противника:<br>(число от 1 до 999)</html>");
+					gameY.head.setText("ГђГ Г§Г¬ГҐГ№ГҐГ­ГЁГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ ");
+					gameY.mes.setText("<html>Г‚ГўГҐГ¤ГЁГІГҐ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ :<br>(Г·ГЁГ±Г«Г® Г®ГІ 1 Г¤Г® 999)</html>");
 					gameY.textField.setText("");
 					gameY.textField.requestFocus();
 					gameY.textField.addKeyListener(keylis5);
@@ -567,8 +568,8 @@ public class editor extends JFrame{
 							gameY.mes.setVisible(true);
 							gameY.head.setVisible(true);
 							gameY.textField.setVisible(false);
-							gameY.head.setText("Ошибка");
-							gameY.mes.setText("<html>Данные введены неверно.</html>");
+							gameY.head.setText("ГЋГёГЁГЎГЄГ ");
+							gameY.mes.setText("<html>Г„Г Г­Г­Г»ГҐ ГўГўГҐГ¤ГҐГ­Г» Г­ГҐГўГҐГ°Г­Г®.</html>");
 							gameY.textField.setText("");
 							gameY.textField.removeKeyListener(keylis5);
 							requestFocus();
@@ -732,7 +733,7 @@ public class editor extends JFrame{
 	}
 	public void saveMap(){
 		map="";
-		//Запись в файл
+		//Г‡Г ГЇГЁГ±Гј Гў ГґГ Г©Г«
 			File file = new File("./Pasan_UserMaps/"+name+".pasan");
 			try {
 		        
