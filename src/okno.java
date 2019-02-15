@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -23,7 +24,7 @@ public class okno extends JFrame{
 	String map="";
 	String level="";
 	String profile="";
-	int menu=0; // 0-Игра, 1-Инвентарь, 2-Навыки, 3-Применение фаербола
+	int menu=0; // 0-Г€ГЈГ°Г , 1-Г€Г­ГўГҐГ­ГІГ Г°Гј, 2-ГЌГ ГўГ»ГЄГЁ, 3-ГЏГ°ГЁГ¬ГҐГ­ГҐГ­ГЁГҐ ГґГ ГҐГ°ГЎГ®Г«Г 
 	String[][] lol = new String[15][10];
 	String spell="none";
 	int[][] health = new int[15][10];
@@ -61,7 +62,7 @@ public class okno extends JFrame{
 				else if((key_==82)&(magic>=30)&(menu==0)){
 					storm();
 				}
-				else if(key_==37){//Влево
+				else if(key_==37){//Г‚Г«ГҐГўГ®
 				if (menu==0){
 				if (hero-(hero/15*15)>0){
 					if (Integer.parseInt(lol[hero-(hero/15*15)-1][hero/15])==3){
@@ -154,7 +155,7 @@ public class okno extends JFrame{
 					}
 				}
 			}
-			else if(key_==38){//Вверх
+			else if(key_==38){//Г‚ГўГҐГ°Гµ
 				if(menu==0){
 				if (hero/15>0){
 					if (Integer.parseInt(lol[hero-(hero/15*15)][hero/15-1])==3){
@@ -246,7 +247,7 @@ public class okno extends JFrame{
 					}
 				}
 			}
-			else if(key_==39){//Вправо
+			else if(key_==39){//Г‚ГЇГ°Г ГўГ®
 				if(menu==0){
 				if (hero-(hero/15*15)<14){
 					if (Integer.parseInt(lol[hero-(hero/15*15)+1][hero/15])==3){
@@ -339,7 +340,7 @@ public class okno extends JFrame{
 				}
 				
 			}
-			else if(key_==40){//Вниз
+			else if(key_==40){//Г‚Г­ГЁГ§
 				if(menu==0){
 				if (hero/15<9){
 					if (Integer.parseInt(lol[hero-(hero/15*15)][hero/15+1])==3){
@@ -438,8 +439,8 @@ public class okno extends JFrame{
 					gameX.mes.setVisible(true);
 					gameX.head.setVisible(true);
 					gameX.textField.setVisible(false);
-					gameX.head.setText("Выход");
-					gameX.mes.setText("<html>Вернуться в главное меню?<br>Вам придется проходить этот уровень заново.</html>");
+					gameX.head.setText("Г‚Г»ГµГ®Г¤");
+					gameX.mes.setText("<html>Г‚ГҐГ°Г­ГіГІГјГ±Гї Гў ГЈГ«Г ГўГ­Г®ГҐ Г¬ГҐГ­Гѕ?<br>Г‚Г Г¬ ГЇГ°ГЁГ¤ГҐГІГ±Гї ГЇГ°Г®ГµГ®Г¤ГЁГІГј ГЅГІГ®ГІ ГіГ°Г®ГўГҐГ­Гј Г§Г Г­Г®ГўГ®.</html>");
 					}
 					else if((menu==1)|(menu==2)){
 						menu=0;
@@ -456,7 +457,7 @@ public class okno extends JFrame{
 						gameX.menu=2;
 					}
 				}
-				else if ((key_==32)|(key_==10)){//Пробел
+				else if ((key_==32)|(key_==10)){//ГЏГ°Г®ГЎГҐГ«
 					spacebar();
 				}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1658,16 +1659,16 @@ public class okno extends JFrame{
 					gameX.mes.setVisible(true);
 					gameX.head.setVisible(true);
 					gameX.textField.setVisible(false);
-					gameX.head.setText("Уровень пройден!");
-					gameX.mes.setText("<html>Вы полностью прошли всю кампанию!<br>Теперь вы можете начать её заново с повышенной сложностью.<br>Прогресс будет сброшен, но вы получите кое-что другое!</html>");
+					gameX.head.setText("Г“Г°Г®ГўГҐГ­Гј ГЇГ°Г®Г©Г¤ГҐГ­!");
+					gameX.mes.setText("<html>Г‚Г» ГЇГ®Г«Г­Г®Г±ГІГјГѕ ГЇГ°Г®ГёГ«ГЁ ГўГ±Гѕ ГЄГ Г¬ГЇГ Г­ГЁГѕ!<br>Г’ГҐГЇГҐГ°Гј ГўГ» Г¬Г®Г¦ГҐГІГҐ Г­Г Г·Г ГІГј ГҐВё Г§Г Г­Г®ГўГ® Г± ГЇГ®ГўГ»ГёГҐГ­Г­Г®Г© Г±Г«Г®Г¦Г­Г®Г±ГІГјГѕ.<br>ГЏГ°Г®ГЈГ°ГҐГ±Г± ГЎГіГ¤ГҐГІ Г±ГЎГ°Г®ГёГҐГ­, Г­Г® ГўГ» ГЇГ®Г«ГіГ·ГЁГІГҐ ГЄГ®ГҐ-Г·ГІГ® Г¤Г°ГіГЈГ®ГҐ!</html>");
 				}
 				else if((Camp==true)&(CampFinished==1)&(Integer.parseInt(level)==25)){
 					gameX.inMessage=5;
 					gameX.mes.setVisible(true);
 					gameX.head.setVisible(true);
 					gameX.textField.setVisible(false);
-					gameX.head.setText("Уровень пройден!");
-					gameX.mes.setText("<html>Вы полностью прошли всю кампанию ДВАЖДЫ!<br>Теперь вы можете выбрать и пройти любой уровень кампании.<br>Сложность ЗНАЧИТЕЛЬНО повышена!</html>");
+					gameX.head.setText("Г“Г°Г®ГўГҐГ­Гј ГЇГ°Г®Г©Г¤ГҐГ­!");
+					gameX.mes.setText("<html>Г‚Г» ГЇГ®Г«Г­Г®Г±ГІГјГѕ ГЇГ°Г®ГёГ«ГЁ ГўГ±Гѕ ГЄГ Г¬ГЇГ Г­ГЁГѕ Г„Г‚ГЂГ†Г„Г›!<br>Г’ГҐГЇГҐГ°Гј ГўГ» Г¬Г®Г¦ГҐГІГҐ ГўГ»ГЎГ°Г ГІГј ГЁ ГЇГ°Г®Г©ГІГЁ Г«ГѕГЎГ®Г© ГіГ°Г®ГўГҐГ­Гј ГЄГ Г¬ГЇГ Г­ГЁГЁ.<br>Г‘Г«Г®Г¦Г­Г®Г±ГІГј Г‡ГЌГЂГ—Г€Г’Г…Г‹ГњГЌГЋ ГЇГ®ГўГ»ГёГҐГ­Г !</html>");
 				}
 				else{
 				setVisible(false);
@@ -1745,8 +1746,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1773,8 +1774,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1801,8 +1802,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1829,8 +1830,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1857,8 +1858,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1885,8 +1886,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1913,8 +1914,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Повысить уровень навыка");
-						gameX.mes.setText("<html>Получено новое умение!</html>");	
+						gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
+						gameX.mes.setText("<html>ГЏГ®Г«ГіГ·ГҐГ­Г® Г­Г®ГўГ®ГҐ ГіГ¬ГҐГ­ГЁГҐ!</html>");	
 					}
 					else{
 						clearMessage();
@@ -1966,7 +1967,7 @@ public class okno extends JFrame{
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
 				gameX.head.setText(skillnamed);
-				gameX.mes.setText("<html>Умение изучено!</html>");
+				gameX.mes.setText("<html>Г“Г¬ГҐГ­ГЁГҐ ГЁГ§ГіГ·ГҐГ­Г®!</html>");
 			}
 			else if(key_==27){
 				clearMessage();
@@ -1983,8 +1984,8 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Кампания");
-				gameX.mes.setText("<html>Уровень "+name+"</html>");
+				gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+				gameX.mes.setText("<html>Г“Г°Г®ГўГҐГ­Гј "+name+"</html>");
 				loadMap();
 			}
 			else if(key_==27){
@@ -1992,8 +1993,8 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(true);
-				gameX.head.setText("Кампания");
-				gameX.mes.setText("<html>Теперь вы можете сами выбрать, какой уровень кампании пройти!<br>Просто введите его номер (от 0 до 24).</html>");
+				gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+				gameX.mes.setText("<html>Г’ГҐГЇГҐГ°Гј ГўГ» Г¬Г®Г¦ГҐГІГҐ Г±Г Г¬ГЁ ГўГ»ГЎГ°Г ГІГј, ГЄГ ГЄГ®Г© ГіГ°Г®ГўГҐГ­Гј ГЄГ Г¬ГЇГ Г­ГЁГЁ ГЇГ°Г®Г©ГІГЁ!<br>ГЏГ°Г®Г±ГІГ® ГўГўГҐГ¤ГЁГІГҐ ГҐГЈГ® Г­Г®Г¬ГҐГ° (Г®ГІ 0 Г¤Г® 24).</html>");
 				gameX.textField.setText("");
 				gameX.textField.requestFocus();
 				gameX.textField.addKeyListener(keylis1);
@@ -2005,8 +2006,8 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Обучение");
-				gameX.mes.setText("<html>Вы можете атаковать противника, если подойдете к нему и нажмете клавишу перемещения в его сторону. Осторожно - если ваше здоровье (красная полоска) упадет ниже нуля, вы проиграете. А теперь попробуйте победить в своем первом бою!</html>");
+				gameX.head.setText("ГЋГЎГіГ·ГҐГ­ГЁГҐ");
+				gameX.mes.setText("<html>Г‚Г» Г¬Г®Г¦ГҐГІГҐ Г ГІГ ГЄГ®ГўГ ГІГј ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ , ГҐГ±Г«ГЁ ГЇГ®Г¤Г®Г©Г¤ГҐГІГҐ ГЄ Г­ГҐГ¬Гі ГЁ Г­Г Г¦Г¬ГҐГІГҐ ГЄГ«Г ГўГЁГёГі ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї Гў ГҐГЈГ® Г±ГІГ®Г°Г®Г­Гі. ГЋГ±ГІГ®Г°Г®Г¦Г­Г® - ГҐГ±Г«ГЁ ГўГ ГёГҐ Г§Г¤Г®Г°Г®ГўГјГҐ (ГЄГ°Г Г±Г­Г Гї ГЇГ®Г«Г®Г±ГЄГ ) ГіГЇГ Г¤ГҐГІ Г­ГЁГ¦ГҐ Г­ГіГ«Гї, ГўГ» ГЇГ°Г®ГЁГЈГ°Г ГҐГІГҐ. ГЂ ГІГҐГЇГҐГ°Гј ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГЇГ®ГЎГҐГ¤ГЁГІГј Гў Г±ГўГ®ГҐГ¬ ГЇГҐГ°ГўГ®Г¬ ГЎГ®Гѕ!</html>");
 			}
 		}
 		else if(gameX.inMessage==19){
@@ -2015,8 +2016,8 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Обучение");
-				gameX.mes.setText("<html>Противники с луком могут атаковать вас издалека. Используйте деревья, чтобы укрыться от их стрел, и подойдите вплотную - в ближнем бою урон лука понижается вдвое.</html>");
+				gameX.head.setText("ГЋГЎГіГ·ГҐГ­ГЁГҐ");
+				gameX.mes.setText("<html>ГЏГ°Г®ГІГЁГўГ­ГЁГЄГЁ Г± Г«ГіГЄГ®Г¬ Г¬Г®ГЈГіГІ Г ГІГ ГЄГ®ГўГ ГІГј ГўГ Г± ГЁГ§Г¤Г Г«ГҐГЄГ . Г€Г±ГЇГ®Г«ГјГ§ГіГ©ГІГҐ Г¤ГҐГ°ГҐГўГјГї, Г·ГІГ®ГЎГ» ГіГЄГ°Г»ГІГјГ±Гї Г®ГІ ГЁГµ Г±ГІГ°ГҐГ«, ГЁ ГЇГ®Г¤Г®Г©Г¤ГЁГІГҐ ГўГЇГ«Г®ГІГ­ГіГѕ - Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ ГіГ°Г®Г­ Г«ГіГЄГ  ГЇГ®Г­ГЁГ¦Г ГҐГІГ±Гї ГўГ¤ГўГ®ГҐ.</html>");
 			}
 		}
 			
@@ -2063,8 +2064,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Кампания");
-						gameX.mes.setText("<html>Уровень "+name+"</html>");
+						gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+						gameX.mes.setText("<html>Г“Г°Г®ГўГҐГ­Гј "+name+"</html>");
 						requestFocus();
 						loadMap();
 					}
@@ -2073,8 +2074,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Ошибка");
-						gameX.mes.setText("<html>Вы ввели номер уровня некорректно.<br>Выбрать случайный уровень?</html>");
+						gameX.head.setText("ГЋГёГЁГЎГЄГ ");
+						gameX.mes.setText("<html>Г‚Г» ГўГўГҐГ«ГЁ Г­Г®Г¬ГҐГ° ГіГ°Г®ГўГ­Гї Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®.<br>Г‚Г»ГЎГ°Г ГІГј Г±Г«ГіГ·Г Г©Г­Г»Г© ГіГ°Г®ГўГҐГ­Гј?</html>");
 						gameX.textField.setText("");
 						gameX.textField.removeKeyListener(keylis1);
 						requestFocus();
@@ -2085,8 +2086,8 @@ public class okno extends JFrame{
 						gameX.mes.setVisible(true);
 						gameX.head.setVisible(true);
 						gameX.textField.setVisible(false);
-						gameX.head.setText("Ошибка");
-						gameX.mes.setText("<html>Вы ввели номер уровня некорректно.<br>Выбрать случайный уровень?</html>");
+						gameX.head.setText("ГЋГёГЁГЎГЄГ ");
+						gameX.mes.setText("<html>Г‚Г» ГўГўГҐГ«ГЁ Г­Г®Г¬ГҐГ° ГіГ°Г®ГўГ­Гї Г­ГҐГЄГ®Г°Г°ГҐГЄГІГ­Г®.<br>Г‚Г»ГЎГ°Г ГІГј Г±Г«ГіГ·Г Г©Г­Г»Г© ГіГ°Г®ГўГҐГ­Гј?</html>");
 						gameX.textField.setText("");
 						gameX.textField.removeKeyListener(keylis1);
 						requestFocus();
@@ -2112,80 +2113,80 @@ public class okno extends JFrame{
 		
 		for (l=minl; l<=maxl; l++){
 			for(g=ming; g<=maxg; g++){
-				if(Integer.parseInt(lol[l][g])==5){// Если нашли противника
+				if(Integer.parseInt(lol[l][g])==5){// Г…Г±Г«ГЁ Г­Г ГёГ«ГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ 
 					//if (enemynear==false){enemynear=true;};
-					if ((l<hero-(hero/15*15))&(g<hero/15)){ // Сверху слева
-						if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Справа свободно, снизу занято => идем направо
+					if ((l<hero-(hero/15*15))&(g<hero/15)){ // Г‘ГўГҐГ°ГµГі Г±Г«ГҐГўГ 
+						if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±Г­ГЁГ§Гі Г§Г Г­ГїГІГ® => ГЁГ¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 							napravo();
 						}
-						else if ((Integer.parseInt(lol[l][g+1])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Снизу свободно, справа занято => идем вниз
+						else if ((Integer.parseInt(lol[l][g+1])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Г‘Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±ГЇГ°Г ГўГ  Г§Г Г­ГїГІГ® => ГЁГ¤ГҐГ¬ ГўГ­ГЁГ§
 							vniz();
 						}
-						else if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Справа свободно, снизу свободно => рандом
+						else if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем направо
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 								napravo();
 							}
-							else{ // Идем вниз
+							else{ // Г€Г¤ГҐГ¬ ГўГ­ГЁГ§
 								vniz();
 							}
 						}
 						 
 					}
-					else if ((l>hero-(hero/15*15))&(g<hero/15)){ // Сверху справа
-						if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Слева свободно, снизу занято => идем налево
+					else if ((l>hero-(hero/15*15))&(g<hero/15)){ // Г‘ГўГҐГ°ГµГі Г±ГЇГ°Г ГўГ 
+						if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Г‘Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±Г­ГЁГ§Гі Г§Г Г­ГїГІГ® => ГЁГ¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 							nalevo();
 						}
-						else if ((Integer.parseInt(lol[l][g+1])==3)&(Integer.parseInt(lol[l-1][g])!=3)){ // Снизу свободно, слева занято => идем вниз
+						else if ((Integer.parseInt(lol[l][g+1])==3)&(Integer.parseInt(lol[l-1][g])!=3)){ // Г‘Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±Г«ГҐГўГ  Г§Г Г­ГїГІГ® => ГЁГ¤ГҐГ¬ ГўГ­ГЁГ§
 							vniz();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Слева свободно, снизу свободно => рандом
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Г‘Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем налево
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 								nalevo();
 							}
-							else { // Идем вниз
+							else { // Г€Г¤ГҐГ¬ ГўГ­ГЁГ§
 								vniz();
 							}
 						}
 					}
-					else if ((l<hero-(hero/15*15))&(g>hero/15)){ // Снизу слева
-						if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g-1])!=3)){ // Справа свободно, наверх нельзя => Идем направо
+					else if ((l<hero-(hero/15*15))&(g>hero/15)){ // Г‘Г­ГЁГ§Гі Г±Г«ГҐГўГ 
+						if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g-1])!=3)){ // Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г ГўГҐГ°Гµ Г­ГҐГ«ГјГ§Гї => Г€Г¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 							napravo();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Сверху свободно, направо нельзя => Идем наверх
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Г‘ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г ГЇГ°Г ГўГ® Г­ГҐГ«ГјГ§Гї => Г€Г¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 							vverh();
 						}
-						else if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g-1])==3)){ // Справа свободно, Сверху свободно => рандом
+						else if ((Integer.parseInt(lol[l+1][g])==3)&(Integer.parseInt(lol[l][g-1])==3)){ // Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г‘ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем направо
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 								napravo();
 							}
-							else{ // Идем вверх
+							else{ // Г€Г¤ГҐГ¬ ГўГўГҐГ°Гµ
 								vverh();
 							}
 							
 						}
 					}
-					else if ((l>hero-(hero/15*15))&(g>hero/15)){ // Снизу справа
-						if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g-1])!=3)){ // Слева свободно, наверх нельзя => идем налево
+					else if ((l>hero-(hero/15*15))&(g>hero/15)){ // Г‘Г­ГЁГ§Гі Г±ГЇГ°Г ГўГ 
+						if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g-1])!=3)){ // Г‘Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г ГўГҐГ°Гµ Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 							nalevo();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l-1][g])!=3)){ // Сверху свободно, налево нельзя => идем наверх
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l-1][g])!=3)){ // Г‘ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г Г«ГҐГўГ® Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 							vverh();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g-1])==3)){ // Слева свободно, сверху свободно => рандом
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l][g-1])==3)){ // Г‘Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем налево
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 								nalevo();
 							}
-							else { // Идем вверх
+							else { // Г€Г¤ГҐГ¬ ГўГўГҐГ°Гµ
 								vverh();
 							}
 					}
 					}
-					else if ((l==hero-(hero/15*15))&(g<hero/15)){ // Сверху
-						if ((Integer.parseInt(lol[l][g+1])==0)&(weapon[l][g]!=3)){// Лука нет, снизу герой => атакуем
+					else if ((l==hero-(hero/15*15))&(g<hero/15)){ // Г‘ГўГҐГ°ГµГі
+						if ((Integer.parseInt(lol[l][g+1])==0)&(weapon[l][g]!=3)){// Г‹ГіГЄГ  Г­ГҐГІ, Г±Г­ГЁГ§Гі ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							if(weapon[l][g]==1){
 							swordattack(l+g*15,hero);
 							}
@@ -2208,7 +2209,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((Integer.parseInt(lol[l][g+1])==0)&(weapon[l][g]==3)){ // Лук есть, снизу герой => атакуем с 50% уроном
+						else if ((Integer.parseInt(lol[l][g+1])==0)&(weapon[l][g]==3)){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±Г­ГЁГ§Гі ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬ Г± 50% ГіГ°Г®Г­Г®Г¬
 							bowattack(l+g*15,hero);
 							evasionmelee();
 							rnd=(int)(Math.random()*100);
@@ -2227,7 +2228,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((g<8)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g+1])!=2)&(Integer.parseInt(lol[l][g+2])==0))){ // Лук есть, снизу свободно, вторая снизу - герой => атакуем
+						else if ((g<8)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g+1])!=2)&(Integer.parseInt(lol[l][g+2])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГІГ®Г°Г Гї Г±Г­ГЁГ§Гі - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2243,7 +2244,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((g<7)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g+1])!=2)&(Integer.parseInt(lol[l][g+2])!=2)&(Integer.parseInt(lol[l][g+3])==0))){ // Лук есть, 2 снизу свободны, третья - герой => атакуем
+						else if ((g<7)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g+1])!=2)&(Integer.parseInt(lol[l][g+2])!=2)&(Integer.parseInt(lol[l][g+3])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, 2 Г±Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г», ГІГ°ГҐГІГјГї - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2259,27 +2260,27 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if (Integer.parseInt(lol[l][g+1])==3){ // снизу свободно => идем вниз
+						else if (Integer.parseInt(lol[l][g+1])==3){ // Г±Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ ГўГ­ГЁГ§
 							vniz();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])!=3)&(Integer.parseInt(lol[l+1][g])==3)){ // Налево нельзя, Справа свободно => идем направо
+						else if ((Integer.parseInt(lol[l-1][g])!=3)&(Integer.parseInt(lol[l+1][g])==3)){ // ГЌГ Г«ГҐГўГ® Г­ГҐГ«ГјГ§Гї, Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 							napravo();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Налево свободно, направо нельзя => идем налево
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // ГЌГ Г«ГҐГўГ® Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г ГЇГ°Г ГўГ® Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 							nalevo();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])==3)){ // налево свободно, справа свободно => рандом
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])==3)){ // Г­Г Г«ГҐГўГ® Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем налево
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 								nalevo();
 							}
-							else{ // Идем направо
+							else{ // Г€Г¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 								napravo();
 							}
 						}
 					}
-					else if ((l==hero-(hero/15*15))&(g>hero/15)){ // Снизу
-						if ((Integer.parseInt(lol[l][g-1])==0)&(weapon[l][g]!=3)){ // Лука нет, сверху герой => атакуем
+					else if ((l==hero-(hero/15*15))&(g>hero/15)){ // Г‘Г­ГЁГ§Гі
+						if ((Integer.parseInt(lol[l][g-1])==0)&(weapon[l][g]!=3)){ // Г‹ГіГЄГ  Г­ГҐГІ, Г±ГўГҐГ°ГµГі ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							if(weapon[l][g]==1){
 								swordattack(l+g*15,hero);
 								}
@@ -2302,7 +2303,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==0)&(weapon[l][g]==3)){ // Лук есть, сверху герой => атакуем с 50% уроном
+						else if ((Integer.parseInt(lol[l][g-1])==0)&(weapon[l][g]==3)){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±ГўГҐГ°ГµГі ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬ Г± 50% ГіГ°Г®Г­Г®Г¬
 							bowattack(l+g*15,hero);
 							evasionmelee();
 							rnd=(int)(Math.random()*100);
@@ -2320,7 +2321,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((g>1)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g-1])!=2)&(Integer.parseInt(lol[l][g-2])==0))){ // Лук есть, сверху свободно, вторая сверху - герой => атакуем
+						else if ((g>1)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g-1])!=2)&(Integer.parseInt(lol[l][g-2])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГІГ®Г°Г Гї Г±ГўГҐГ°ГµГі - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2335,9 +2336,9 @@ public class okno extends JFrame{
 							else{
 								missanim();
 							}
-							//System.out.println("Снизу, лук есть, на 2й клетке сверху герой, атакуем");
+							//System.out.println("Г‘Г­ГЁГ§Гі, Г«ГіГЄ ГҐГ±ГІГј, Г­Г  2Г© ГЄГ«ГҐГІГЄГҐ Г±ГўГҐГ°ГµГі ГЈГҐГ°Г®Г©, Г ГІГ ГЄГіГҐГ¬");
 						}
-						else if ((g>2)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g-1])!=2)&(Integer.parseInt(lol[l][g-2])!=2)&(Integer.parseInt(lol[l][g-3])==0))){ // Лук есть, 2 сверху свободны, третья - герой => атакуем
+						else if ((g>2)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l][g-1])!=2)&(Integer.parseInt(lol[l][g-2])!=2)&(Integer.parseInt(lol[l][g-3])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, 2 Г±ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г», ГІГ°ГҐГІГјГї - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2353,27 +2354,27 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if (Integer.parseInt(lol[l][g-1])==3){ // сверху свободно => идем наверх
+						else if (Integer.parseInt(lol[l][g-1])==3){ // Г±ГўГҐГ°ГµГі Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 							vverh();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])!=3)&(Integer.parseInt(lol[l+1][g])==3)){ // Налево нельзя, Справа свободно => идем направо
+						else if ((Integer.parseInt(lol[l-1][g])!=3)&(Integer.parseInt(lol[l+1][g])==3)){ // ГЌГ Г«ГҐГўГ® Г­ГҐГ«ГјГ§Гї, Г‘ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 							napravo();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // Налево свободно, направо нельзя => идем налево
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])!=3)){ // ГЌГ Г«ГҐГўГ® Г±ГўГ®ГЎГ®Г¤Г­Г®, Г­Г ГЇГ°Г ГўГ® Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 							nalevo();
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])==3)){ // налево свободно, справа свободно => рандом
+						else if ((Integer.parseInt(lol[l-1][g])==3)&(Integer.parseInt(lol[l+1][g])==3)){ // Г­Г Г«ГҐГўГ® Г±ГўГ®ГЎГ®Г¤Г­Г®, Г±ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем налево
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 								nalevo();
 							}
-							else{ // Идем направо
+							else{ // Г€Г¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 								napravo();
 							}
 						}
 					}
-					else if ((l<hero-(hero/15*15))&(g==hero/15)){ // Слева
-						if ((Integer.parseInt(lol[l+1][g])==0)&(weapon[l][g]!=3)){ // Лука нет, справа герой => атакуем
+					else if ((l<hero-(hero/15*15))&(g==hero/15)){ // Г‘Г«ГҐГўГ 
+						if ((Integer.parseInt(lol[l+1][g])==0)&(weapon[l][g]!=3)){ // Г‹ГіГЄГ  Г­ГҐГІ, Г±ГЇГ°Г ГўГ  ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							if(weapon[l][g]==1){
 								swordattack(l+g*15,hero);
 								}
@@ -2396,7 +2397,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((Integer.parseInt(lol[l+1][g])==0)&(weapon[l][g]==3)){ // Лук есть, справа герой => атакуем с 50% уроном
+						else if ((Integer.parseInt(lol[l+1][g])==0)&(weapon[l][g]==3)){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±ГЇГ°Г ГўГ  ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬ Г± 50% ГіГ°Г®Г­Г®Г¬
 							bowattack(l+g*15,hero);
 							evasionmelee();
 							rnd=(int)(Math.random()*100);
@@ -2414,7 +2415,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((l<13)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l+1][g])!=2)&(Integer.parseInt(lol[l+2][g])==0))){ // Лук есть, справа свободно, вторая справа - герой => атакуем
+						else if ((l<13)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l+1][g])!=2)&(Integer.parseInt(lol[l+2][g])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГІГ®Г°Г Гї Г±ГЇГ°Г ГўГ  - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2430,7 +2431,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((l<12)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l+1][g])!=2)&(Integer.parseInt(lol[l+2][g])!=2)&(Integer.parseInt(lol[l+3][g])==0))){ // Лук есть, 2 справа свободны, третья - герой => атакуем
+						else if ((l<12)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l+1][g])!=2)&(Integer.parseInt(lol[l+2][g])!=2)&(Integer.parseInt(lol[l+3][g])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, 2 Г±ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г», ГІГ°ГҐГІГјГї - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2446,27 +2447,27 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if (Integer.parseInt(lol[l+1][g])==3){ // справа свободно => идем направо
+						else if (Integer.parseInt(lol[l+1][g])==3){ // Г±ГЇГ°Г ГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ Г­Г ГЇГ°Г ГўГ®
 							napravo();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])!=3)&(Integer.parseInt(lol[l][g+1])==3)){ // Наверх нельзя, Снизу свободно => идем вниз
+						else if ((Integer.parseInt(lol[l][g-1])!=3)&(Integer.parseInt(lol[l][g+1])==3)){ // ГЌГ ГўГҐГ°Гµ Г­ГҐГ«ГјГ§Гї, Г‘Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ ГўГ­ГЁГ§
 							vniz();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Наверх свободно, вниз нельзя => идем наверх
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // ГЌГ ГўГҐГ°Гµ Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГ­ГЁГ§ Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 							vverh();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // наверх свободно, вниз свободно => рандом
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Г­Г ГўГҐГ°Гµ Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГ­ГЁГ§ Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем наверх
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 								vverh();
 							}
-							else{ // Идем вниз
+							else{ // Г€Г¤ГҐГ¬ ГўГ­ГЁГ§
 								vniz();
 							}
 						}
 					}
-					else if ((l>hero-(hero/15*15))&(g==hero/15)){ // Справа
-						if ((Integer.parseInt(lol[l-1][g])==0)&(weapon[l][g]!=3)){ // Лука нет, слева герой => атакуем
+					else if ((l>hero-(hero/15*15))&(g==hero/15)){ // Г‘ГЇГ°Г ГўГ 
+						if ((Integer.parseInt(lol[l-1][g])==0)&(weapon[l][g]!=3)){ // Г‹ГіГЄГ  Г­ГҐГІ, Г±Г«ГҐГўГ  ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							if(weapon[l][g]==1){
 								swordattack(l+g*15,hero);
 								}
@@ -2489,7 +2490,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((Integer.parseInt(lol[l-1][g])==0)&(weapon[l][g]==3)){ // Лук есть, слева герой => атакуем с 50% уроном
+						else if ((Integer.parseInt(lol[l-1][g])==0)&(weapon[l][g]==3)){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±Г«ГҐГўГ  ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬ Г± 50% ГіГ°Г®Г­Г®Г¬
 							bowattack(l+g*15,hero);
 							evasionmelee();
 							rnd=(int)(Math.random()*100);
@@ -2507,7 +2508,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((l>1)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l-1][g])!=2)&(Integer.parseInt(lol[l-2][g])==0))){ // Лук есть, слева свободно, вторая слева - герой => атакуем
+						else if ((l>1)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l-1][g])!=2)&(Integer.parseInt(lol[l-2][g])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, Г±Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГІГ®Г°Г Гї Г±Г«ГҐГўГ  - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2523,7 +2524,7 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if ((l>2)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l-1][g])!=2)&(Integer.parseInt(lol[l-2][g])!=2)&(Integer.parseInt(lol[l-3][g])==0))){ // Лук есть, 2 слева свободны, третья - герой => атакуем
+						else if ((l>2)&&((weapon[l][g]==3)&(Integer.parseInt(lol[l-1][g])!=2)&(Integer.parseInt(lol[l-2][g])!=2)&(Integer.parseInt(lol[l-3][g])==0))){ // Г‹ГіГЄ ГҐГ±ГІГј, 2 Г±Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г», ГІГ°ГҐГІГјГї - ГЈГҐГ°Г®Г© => Г ГІГ ГЄГіГҐГ¬
 							gameX.animation+=1;
 							gameX.anim[gameX.animation][0]=1;
 							gameX.anim[gameX.animation][1]=l+g*15;
@@ -2539,22 +2540,22 @@ public class okno extends JFrame{
 								missanim();
 							}
 						}
-						else if (Integer.parseInt(lol[l-1][g])==3){ // слева свободно => идем налево
+						else if (Integer.parseInt(lol[l-1][g])==3){ // Г±Г«ГҐГўГ  Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ Г­Г Г«ГҐГўГ®
 							nalevo();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])!=3)&(Integer.parseInt(lol[l][g+1])==3)){ // Наверх нельзя, Снизу свободно => идем вниз
+						else if ((Integer.parseInt(lol[l][g-1])!=3)&(Integer.parseInt(lol[l][g+1])==3)){ // ГЌГ ГўГҐГ°Гµ Г­ГҐГ«ГјГ§Гї, Г‘Г­ГЁГ§Гі Г±ГўГ®ГЎГ®Г¤Г­Г® => ГЁГ¤ГҐГ¬ ГўГ­ГЁГ§
 							vniz();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // Наверх свободно, вниз нельзя => идем наверх
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])!=3)){ // ГЌГ ГўГҐГ°Гµ Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГ­ГЁГ§ Г­ГҐГ«ГјГ§Гї => ГЁГ¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 							vverh();
 						}
-						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // наверх свободно, вниз свободно => рандом
+						else if ((Integer.parseInt(lol[l][g-1])==3)&(Integer.parseInt(lol[l][g+1])==3)){ // Г­Г ГўГҐГ°Гµ Г±ГўГ®ГЎГ®Г¤Г­Г®, ГўГ­ГЁГ§ Г±ГўГ®ГЎГ®Г¤Г­Г® => Г°Г Г­Г¤Г®Г¬
 							rnd = (int)(Math.random()*100);
-							if (rnd>=50){ // Идем наверх
+							if (rnd>=50){ // Г€Г¤ГҐГ¬ Г­Г ГўГҐГ°Гµ
 
 								vverh();
 							}
-							else{ // Идем вниз
+							else{ // Г€Г¤ГҐГ¬ ГўГ­ГЁГ§
 								vniz();
 							}
 						}
@@ -2575,13 +2576,13 @@ public class okno extends JFrame{
 			gameX.mes.setVisible(true);
 			gameX.head.setVisible(true);
 			gameX.textField.setVisible(false);
-			gameX.head.setText("ПОТРАЧЕНО");
-			gameX.mes.setText("<html>Противник оказался сильнее...</html>");
+			gameX.head.setText("ГЏГЋГ’ГђГЂГ—Г…ГЌГЋ");
+			gameX.mes.setText("<html>ГЏГ°Г®ГІГЁГўГ­ГЁГЄ Г®ГЄГ Г§Г Г«Г±Гї Г±ГЁГ«ГјГ­ГҐГҐ...</html>");
 		}
 		enemynear=false;
 		for (l=minl; l<=maxl; l++){
 			for(g=ming; g<=maxg; g++){
-				if(Integer.parseInt(lol[l][g])==5){// Если нашли противника
+				if(Integer.parseInt(lol[l][g])==5){// Г…Г±Г«ГЁ Г­Г ГёГ«ГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ 
 					enemynear=true;
 				}
 			}
@@ -2614,7 +2615,7 @@ public class okno extends JFrame{
 		armor[l][g]=0;
 		weapon[l][g]=0;
 		maxhealth[l][g]=0;*/
-		//System.out.println(health[l][g-1]+"/"+maxhealth[l][g-1]+" Вверх");
+		//System.out.println(health[l][g-1]+"/"+maxhealth[l][g-1]+" Г‚ГўГҐГ°Гµ");
 	}
 	public void vniz(){
 		gameX.animation++;
@@ -2633,7 +2634,7 @@ public class okno extends JFrame{
 		armor[l][g]=0;
 		weapon[l][g]=0;
 		maxhealth[l][g]=0;*/
-		//System.out.println(health[l][g+1]+"/"+maxhealth[l][g+1]+" Вниз");
+		//System.out.println(health[l][g+1]+"/"+maxhealth[l][g+1]+" Г‚Г­ГЁГ§");
 	}
 	public void napravo(){
 		gameX.animation++;
@@ -2652,7 +2653,7 @@ public class okno extends JFrame{
 		armor[l][g]=0;
 		weapon[l][g]=0;
 		maxhealth[l][g]=0;*/
-		//System.out.println(health[l+1][g]+"/"+maxhealth[l+1][g]+" Направо");
+		//System.out.println(health[l+1][g]+"/"+maxhealth[l+1][g]+" ГЌГ ГЇГ°Г ГўГ®");
 		
 	}
 	public void nalevo(){
@@ -2672,7 +2673,7 @@ public class okno extends JFrame{
 		armor[l][g]=0;
 		weapon[l][g]=0;
 		maxhealth[l][g]=0;*/
-		//System.out.println(health[l-1][g]+"/"+maxhealth[l-1][g]+" Налево");
+		//System.out.println(health[l-1][g]+"/"+maxhealth[l-1][g]+" ГЌГ Г«ГҐГўГ®");
 	}
 	public void profreader(){
 		exp=Character.getNumericValue(profile.charAt(2))*10+Character.getNumericValue(profile.charAt(3));
@@ -2847,7 +2848,7 @@ public class okno extends JFrame{
 		            out.close();
 		        }
 		   } catch (IOException ex) {
-		        System.out.println("Ошибко, мля");
+		        System.out.println("ГЋГёГЁГЎГЄГ®, Г¬Г«Гї");
 		    }
 		}
 
@@ -2861,10 +2862,10 @@ public class okno extends JFrame{
 				gameX.inv[0][0]=inventory[0][0];
 				}
 				if((inventory[0][0]>=2)&(inventory[0][1]==0)){
-					chestMesDual("Ржавый меч (Уровень I)");
+					chestMesDual("ГђГ¦Г ГўГ»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј I)");
 				}
 				else{
-					chestMes("Ржавый меч (Уровень I)");
+					chestMes("ГђГ¦Г ГўГ»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј I)");
 				}
 			}
 			else if(rnd<=30){
@@ -2872,28 +2873,28 @@ public class okno extends JFrame{
 				inventory[0][2]+=1;
 				gameX.inv[0][2]=inventory[0][2];
 				}
-				chestMes("Короткий лук (Уровень I)");
+				chestMes("ГЉГ®Г°Г®ГІГЄГЁГ© Г«ГіГЄ (Г“Г°Г®ГўГҐГ­Гј I)");
 			}
 			else if(rnd<=45){
 				if(inventory[0][3]<99){
 				inventory[0][3]+=1;
 				gameX.inv[0][3]=inventory[0][3];
 				}
-				chestMes("Порванная кожаная броня (Уровень I)");
+				chestMes("ГЏГ®Г°ГўГ Г­Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј I)");
 			}
 			else if(rnd<=60){
 				if(inventory[0][4]<99){
 				inventory[0][4]+=1;
 				gameX.inv[0][4]=inventory[0][4];
 				}
-				chestMes("Ржавая железная броня (Уровень I)");
+				chestMes("ГђГ¦Г ГўГ Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј I)");
 			}
 			else if(rnd<=75){
 				if(inventory[0][5]<99){
 				inventory[0][5]+=1;
 				gameX.inv[0][5]=inventory[0][5];
 				}
-				chestMes("Поломанная золотая броня (Уровень I)");
+				chestMes("ГЏГ®Г«Г®Г¬Г Г­Г­Г Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј I)");
 			}
 			else if(rnd<=89){
 				if(inventory[1][0]<99){
@@ -2901,10 +2902,10 @@ public class okno extends JFrame{
 				gameX.inv[1][0]=inventory[1][0];
 				}
 				if((inventory[1][0]>=2)&(inventory[1][1]==0)){
-					chestMesDual("Железный меч (Уровень II)");
+					chestMesDual("Г†ГҐГ«ГҐГ§Г­Г»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј II)");
 				}
 				else{
-					chestMes("Железный меч (Уровень II)");
+					chestMes("Г†ГҐГ«ГҐГ§Г­Г»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј II)");
 				}
 			}
 			else if(rnd<=103){
@@ -2912,28 +2913,28 @@ public class okno extends JFrame{
 				inventory[1][2]+=1;
 				gameX.inv[1][2]=inventory[1][2];
 				}
-				chestMes("Охотничий лук (Уровень II)");
+				chestMes("ГЋГµГ®ГІГ­ГЁГ·ГЁГ© Г«ГіГЄ (Г“Г°Г®ГўГҐГ­Гј II)");
 			}
 			else if(rnd<=121){
 				if(inventory[1][3]<99){
 				inventory[1][3]+=1;
 				gameX.inv[1][3]=inventory[1][3];
 				}
-				chestMes("Поношенная кожаная броня (Уровень II)");
+				chestMes("ГЏГ®Г­Г®ГёГҐГ­Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј II)");
 			}
 			else if(rnd<=135){
 				if(inventory[1][4]<99){
 				inventory[1][4]+=1;
 				gameX.inv[1][4]=inventory[1][4];
 				}
-				chestMes("Неплохая железная броня (Уровень II)");
+				chestMes("ГЌГҐГЇГ«Г®ГµГ Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј II)");
 			}
 			else if(rnd<=149){
 				if(inventory[1][5]<99){
 				inventory[1][5]+=1;
 				gameX.inv[1][5]=inventory[1][5];
 				}
-				chestMes("Хорошая золотая броня (Уровень II)");
+				chestMes("Г•Г®Г°Г®ГёГ Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј II)");
 			}
 			else if(rnd<=155){
 				if(inventory[2][0]<99){
@@ -2941,10 +2942,10 @@ public class okno extends JFrame{
 				gameX.inv[2][0]=inventory[2][0];
 				}
 				if((inventory[2][0]>=2)&(inventory[2][1]==0)){
-					chestMesDual("Прокованный меч (Уровень III)");
+					chestMesDual("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј III)");
 				}
 				else{
-					chestMes("Прокованный меч (Уровень III)");
+					chestMes("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г»Г© Г¬ГҐГ· (Г“Г°Г®ГўГҐГ­Гј III)");
 				}
 			}
 			else if(rnd<=161){
@@ -2952,28 +2953,28 @@ public class okno extends JFrame{
 				inventory[2][2]+=1;
 				gameX.inv[2][2]=inventory[2][2];
 				}
-				chestMes("Усиленный лук (Уровень III)");
+				chestMes("Г“Г±ГЁГ«ГҐГ­Г­Г»Г© Г«ГіГЄ (Г“Г°Г®ГўГҐГ­Гј III)");
 			}
 			else if(rnd<=167){
 				if(inventory[2][3]<99){
 				inventory[2][3]+=1;
 				gameX.inv[2][3]=inventory[2][3];
 				}
-				chestMes("Удобная кожаная броня (Уровень III)");
+				chestMes("Г“Г¤Г®ГЎГ­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј III)");
 			}
 			else if(rnd<=173){
 				if(inventory[2][4]<99){
 				inventory[2][4]+=1;
 				gameX.inv[2][4]=inventory[2][4];
 				}
-				chestMes("Прокованная железная броня (Уровень III)");
+				chestMes("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј III)");
 			}
 			else if(rnd<=179){
 				if(inventory[2][5]<99){
 				inventory[2][5]+=1;
 				gameX.inv[2][5]=inventory[2][5];
 				}
-				chestMes("Надежная золотая броня (Уровень III)");
+				chestMes("ГЌГ Г¤ГҐГ¦Г­Г Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј III)");
 			}
 			else if(rnd<=182){
 				if(inventory[3][0]<99){
@@ -2981,10 +2982,10 @@ public class okno extends JFrame{
 				gameX.inv[3][0]=inventory[3][0];
 				}
 				if((inventory[3][0]>=2)&(inventory[3][1]==0)){
-					chestMesDual("Меч Идеальной защиты (Уровень IV)");
+					chestMesDual("ГЊГҐГ· Г€Г¤ГҐГ Г«ГјГ­Г®Г© Г§Г Г№ГЁГІГ» (Г“Г°Г®ГўГҐГ­Гј IV)");
 				}
 				else{
-					chestMes("Меч Идеальной защиты (Уровень IV)");
+					chestMes("ГЊГҐГ· Г€Г¤ГҐГ Г«ГјГ­Г®Г© Г§Г Г№ГЁГІГ» (Г“Г°Г®ГўГҐГ­Гј IV)");
 				}
 			}
 			else if(rnd<=185){
@@ -2992,28 +2993,28 @@ public class okno extends JFrame{
 				inventory[3][2]+=1;
 				gameX.inv[3][2]=inventory[3][2];
 				}
-				chestMes("Зачарованный лук (Уровень IV)");
+				chestMes("Г‡Г Г·Г Г°Г®ГўГ Г­Г­Г»Г© Г«ГіГЄ (Г“Г°Г®ГўГҐГ­Гј IV)");
 			}
 			else if(rnd<=188){
 				if(inventory[3][3]<99){
 				inventory[3][3]+=1;
 				gameX.inv[3][3]=inventory[3][3];
 				}
-				chestMes("Свободная кожаная броня (Уровень IV)");
+				chestMes("Г‘ГўГ®ГЎГ®Г¤Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї (Г“Г°Г®ГўГҐГ­Гј IV)");
 			}
 			else if(rnd<=191){
 				if(inventory[3][4]<99){
 				inventory[3][4]+=1;
 				gameX.inv[3][4]=inventory[3][4];
 				}
-				chestMes("Железный доспех Берсерка (Уровень IV)");
+				chestMes("Г†ГҐГ«ГҐГ§Г­Г»Г© Г¤Г®Г±ГЇГҐГµ ГЃГҐГ°Г±ГҐГ°ГЄГ  (Г“Г°Г®ГўГҐГ­Гј IV)");
 			}
 			else if(rnd<=194){
 				if(inventory[3][5]<99){
 				inventory[3][5]+=1;
 				gameX.inv[3][5]=inventory[3][5];
 				}
-				chestMes("Проклятый золотой доспех (Уровень IV)");
+				chestMes("ГЏГ°Г®ГЄГ«ГїГІГ»Г© Г§Г®Г«Г®ГІГ®Г© Г¤Г®Г±ГЇГҐГµ (Г“Г°Г®ГўГҐГ­Гј IV)");
 			}
 			else if(rnd<=195){
 				if(inventory[4][0]<99){
@@ -3021,10 +3022,10 @@ public class okno extends JFrame{
 				gameX.inv[4][0]=inventory[4][0];
 				}
 				if((inventory[4][0]>=2)&(inventory[4][1]==0)){
-					chestMesDual("Легендарный меч Смертельного удара (Уровень V)");
+					chestMesDual("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»Г© Г¬ГҐГ· Г‘Г¬ГҐГ°ГІГҐГ«ГјГ­Г®ГЈГ® ГіГ¤Г Г°Г  (Г“Г°Г®ГўГҐГ­Гј V)");
 				}
 				else{
-					chestMes("Легендарный меч Смертельного удара (Уровень V)");
+					chestMes("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»Г© Г¬ГҐГ· Г‘Г¬ГҐГ°ГІГҐГ«ГјГ­Г®ГЈГ® ГіГ¤Г Г°Г  (Г“Г°Г®ГўГҐГ­Гј V)");
 				}
 			}
 			else if(rnd<=196){
@@ -3032,28 +3033,28 @@ public class okno extends JFrame{
 				inventory[4][2]+=1;
 				gameX.inv[4][2]=inventory[4][2];
 				}
-				chestMes("Легендарный лук Снайперского выстрела (Уровень V)");
+				chestMes("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»Г© Г«ГіГЄ Г‘Г­Г Г©ГЇГҐГ°Г±ГЄГ®ГЈГ® ГўГ»Г±ГІГ°ГҐГ«Г  (Г“Г°Г®ГўГҐГ­Гј V)");
 			}
 			else if(rnd<=197){
 				if(inventory[4][3]<99){
 				inventory[4][3]+=1;
 				gameX.inv[4][3]=inventory[4][3];
 				}
-				chestMes("Кожаный доспех Опытного рейнджера (Уровень V)");
+				chestMes("ГЉГ®Г¦Г Г­Г»Г© Г¤Г®Г±ГЇГҐГµ ГЋГЇГ»ГІГ­Г®ГЈГ® Г°ГҐГ©Г­Г¤Г¦ГҐГ°Г  (Г“Г°Г®ГўГҐГ­Гј V)");
 			}
 			else if(rnd<=198){
 				if(inventory[4][4]<99){
 				inventory[4][4]+=1;
 				gameX.inv[4][4]=inventory[4][4];
 				}
-				chestMes("Латы Непобедимого рыцаря (Уровень V)");
+				chestMes("Г‹Г ГІГ» ГЌГҐГЇГ®ГЎГҐГ¤ГЁГ¬Г®ГЈГ® Г°Г»Г¶Г Г°Гї (Г“Г°Г®ГўГҐГ­Гј V)");
 			}
 			else{
 				if(inventory[4][5]<99){
 				inventory[4][5]+=1;
 				gameX.inv[4][5]=inventory[4][5];
 				}
-				chestMes("Золотые латы Архимага (Уровень V)");
+				chestMes("Г‡Г®Г«Г®ГІГ»ГҐ Г«Г ГІГ» ГЂГ°ГµГЁГ¬Г ГЈГ  (Г“Г°Г®ГўГҐГ­Гј V)");
 			}
 		
 	}
@@ -3536,8 +3537,8 @@ public class okno extends JFrame{
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Уровень пройден!");
-		gameX.mes.setText("<html>Уровень пройден!</html>");
+		gameX.head.setText("Г“Г°Г®ГўГҐГ­Гј ГЇГ°Г®Г©Г¤ГҐГ­!");
+		gameX.mes.setText("<html>Г“Г°Г®ГўГҐГ­Гј ГЇГ°Г®Г©Г¤ГҐГ­!</html>");
 	}
 	public void deathstrike(int b){
 		if(eqweapon==4){
@@ -3558,16 +3559,16 @@ public class okno extends JFrame{
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Повышение навыка");
-		gameX.mes.setText("<html>Достигнут максимальный уровень навыка.</html>");
+		gameX.head.setText("ГЏГ®ГўГ»ГёГҐГ­ГЁГҐ Г­Г ГўГ»ГЄГ ");
+		gameX.mes.setText("<html>Г„Г®Г±ГІГЁГЈГ­ГіГІ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г© ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ .</html>");
 	}
 	public void ned(){
 		gameX.inMessage=3;
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Повышение навыка");
-		gameX.mes.setText("<html>Недостаточно очков навыков.</html>");
+		gameX.head.setText("ГЏГ®ГўГ»ГёГҐГ­ГЁГҐ Г­Г ГўГ»ГЄГ ");
+		gameX.mes.setText("<html>ГЌГҐГ¤Г®Г±ГІГ ГІГ®Г·Г­Г® Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў.</html>");
 	}
 	//////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////
@@ -3575,94 +3576,94 @@ public class okno extends JFrame{
 	public void spacebar(){
 		if(menu==1){
 			if (inv_ram==0){
-				invMes("Ржавый меч<br>Урон:8", 0, 0);
+				invMes("ГђГ¦Г ГўГ»Г© Г¬ГҐГ·<br>Г“Г°Г®Г­:8", 0, 0);
 			}
 			else if (inv_ram==1){
-				invMes("Железный меч<br>Урон:12", 1, 0);
+				invMes("Г†ГҐГ«ГҐГ§Г­Г»Г© Г¬ГҐГ·<br>Г“Г°Г®Г­:12", 1, 0);
 			}
 			else if(inv_ram==2){
-				invMes("Прокованный меч<br>Урон:20", 2, 0);
+				invMes("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г»Г© Г¬ГҐГ·<br>Г“Г°Г®Г­:20", 2, 0);
 			}
 			else if(inv_ram==3){
-				invMes("Меч Идеальной защиты<br>Урон:16<br>Блокирует 30% урона в ближнем бою", 3, 0);
+				invMes("ГЊГҐГ· Г€Г¤ГҐГ Г«ГјГ­Г®Г© Г§Г Г№ГЁГІГ»<br>Г“Г°Г®Г­:16<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 30% ГіГ°Г®Г­Г  Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ", 3, 0);
 			}
 			else if(inv_ram==4){
-				invMes("Легендарный меч Смертельного удара<br>Урон:36<br>Каждая атака с вероятностью 5% мгновенно убивает цель", 4, 0);
+				invMes("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»Г© Г¬ГҐГ· Г‘Г¬ГҐГ°ГІГҐГ«ГјГ­Г®ГЈГ® ГіГ¤Г Г°Г <br>Г“Г°Г®Г­:36<br>ГЉГ Г¦Г¤Г Гї Г ГІГ ГЄГ  Г± ГўГҐГ°Г®ГїГІГ­Г®Г±ГІГјГѕ 5% Г¬ГЈГ­Г®ГўГҐГ­Г­Г® ГіГЎГЁГўГ ГҐГІ Г¶ГҐГ«Гј", 4, 0);
 			}
 			else if(inv_ram==5){
-				invMes("Ржавые парные клинки<br>Урон:12", 0, 1);
+				invMes("ГђГ¦Г ГўГ»ГҐ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ<br>Г“Г°Г®Г­:12", 0, 1);
 			}
 			else if(inv_ram==6){
-				invMes("Железные парные клинки<br>Урон:21", 1, 1);
+				invMes("Г†ГҐГ«ГҐГ§Г­Г»ГҐ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ<br>Г“Г°Г®Г­:21", 1, 1);
 			}
 			else if(inv_ram==7){
-				invMes("Прокованные парные клинки<br>Урон:30", 2, 1);
+				invMes("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г»ГҐ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ<br>Г“Г°Г®Г­:30", 2, 1);
 			}
 			else if(inv_ram==8){
-				invMes("Парные клинки Двойного блокирования<br>Урон:24<br>Блокируют 25% урона в ближнем бою", 3, 1);
+				invMes("ГЏГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ Г„ГўГ®Г©Г­Г®ГЈГ® ГЎГ«Г®ГЄГЁГ°Г®ГўГ Г­ГЁГї<br>Г“Г°Г®Г­:24<br>ГЃГ«Г®ГЄГЁГ°ГіГѕГІ 25% ГіГ°Г®Г­Г  Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ", 3, 1);
 			}
 			else if(inv_ram==9){
-				invMes("Легендарные парные клинки Вихря ударов<br>Урон:48<br>При каждой атаке дополнительно наносят 20% урона противникам на 4-х соседних клетках", 4, 1);
+				invMes("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»ГҐ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ Г‚ГЁГµГ°Гї ГіГ¤Г Г°Г®Гў<br>Г“Г°Г®Г­:48<br>ГЏГ°ГЁ ГЄГ Г¦Г¤Г®Г© Г ГІГ ГЄГҐ Г¤Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г® Г­Г Г­Г®Г±ГїГІ 20% ГіГ°Г®Г­Г  ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Г­Г  4-Гµ Г±Г®Г±ГҐГ¤Г­ГЁГµ ГЄГ«ГҐГІГЄГ Гµ", 4, 1);
 			}
 			else if(inv_ram==10){
-				invMes("Короткий лук<br>Урон:6<br>Дальность атаки: 2 клетки", 0, 2);
+				invMes("ГЉГ®Г°Г®ГІГЄГЁГ© Г«ГіГЄ<br>Г“Г°Г®Г­:6<br>Г„Г Г«ГјГ­Г®Г±ГІГј Г ГІГ ГЄГЁ: 2 ГЄГ«ГҐГІГЄГЁ", 0, 2);
 			}
 			else if(inv_ram==11){
-				invMes("Охотничий лук<br>Урон:10<br>Дальность атаки: 3 клетки", 1, 2);
+				invMes("ГЋГµГ®ГІГ­ГЁГ·ГЁГ© Г«ГіГЄ<br>Г“Г°Г®Г­:10<br>Г„Г Г«ГјГ­Г®Г±ГІГј Г ГІГ ГЄГЁ: 3 ГЄГ«ГҐГІГЄГЁ", 1, 2);
 			}
 			else if(inv_ram==12){
-				invMes("Усиленный лук<br>Урон:18<br>Дальность атаки: 3 клетки", 2, 2);
+				invMes("Г“Г±ГЁГ«ГҐГ­Г­Г»Г© Г«ГіГЄ<br>Г“Г°Г®Г­:18<br>Г„Г Г«ГјГ­Г®Г±ГІГј Г ГІГ ГЄГЁ: 3 ГЄГ«ГҐГІГЄГЁ", 2, 2);
 			}
 			else if(inv_ram==13){
-				invMes("Зачарованный лук<br>Урон:16<br>Дальность атаки: 3 клетки<br>Ваши атаки дополнительно наносят урон в размере 50% от навыка магии", 3, 2);
+				invMes("Г‡Г Г·Г Г°Г®ГўГ Г­Г­Г»Г© Г«ГіГЄ<br>Г“Г°Г®Г­:16<br>Г„Г Г«ГјГ­Г®Г±ГІГј Г ГІГ ГЄГЁ: 3 ГЄГ«ГҐГІГЄГЁ<br>Г‚Г ГёГЁ Г ГІГ ГЄГЁ Г¤Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г® Г­Г Г­Г®Г±ГїГІ ГіГ°Г®Г­ Гў Г°Г Г§Г¬ГҐГ°ГҐ 50% Г®ГІ Г­Г ГўГ»ГЄГ  Г¬Г ГЈГЁГЁ", 3, 2);
 			}
 			else if(inv_ram==14){
-				invMes("Легендарный лук Снайперского выстрела<br>Урон:28<br>Дальность атаки: 4 клетки", 4, 2);
+				invMes("Г‹ГҐГЈГҐГ­Г¤Г Г°Г­Г»Г© Г«ГіГЄ Г‘Г­Г Г©ГЇГҐГ°Г±ГЄГ®ГЈГ® ГўГ»Г±ГІГ°ГҐГ«Г <br>Г“Г°Г®Г­:28<br>Г„Г Г«ГјГ­Г®Г±ГІГј Г ГІГ ГЄГЁ: 4 ГЄГ«ГҐГІГЄГЁ", 4, 2);
 			}
 			else if(inv_ram==15){
-				invMes("Порванная кожаная броня<br>Блокирует 5% урона", 0, 3);
+				invMes("ГЏГ®Г°ГўГ Г­Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 5% ГіГ°Г®Г­Г ", 0, 3);
 			}
 			else if(inv_ram==16){
-				invMes("Поношенная кожаная броня<br>Блокирует 10% урона", 1, 3);
+				invMes("ГЏГ®Г­Г®ГёГҐГ­Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 10% ГіГ°Г®Г­Г ", 1, 3);
 			}
 			else if(inv_ram==17){
-				invMes("Удобная кожаная броня<br>Блокирует 20% урона", 2, 3);
+				invMes("Г“Г¤Г®ГЎГ­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 20% ГіГ°Г®Г­Г ", 2, 3);
 			}
 			else if(inv_ram==18){
-				invMes("Свободная кожаная броня<br>Блокирует 35% урона<br>+20% шанс уклонения от атаки в ближнем бою", 3, 3);
+				invMes("Г‘ГўГ®ГЎГ®Г¤Г­Г Гї ГЄГ®Г¦Г Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 35% ГіГ°Г®Г­Г <br>+20% ГёГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Г®ГІ Г ГІГ ГЄГЁ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ", 3, 3);
 			}
 			else if(inv_ram==19){
-				invMes("Кожаный доспех Опытного рейнджера<br>Блокирует 50% урона<br>+35% шанс уклонения от атаки в ближнем бою<br>Ваше оружие наносит на 20% больше урона", 4, 3);
+				invMes("ГЉГ®Г¦Г Г­Г»Г© Г¤Г®Г±ГЇГҐГµ ГЋГЇГ»ГІГ­Г®ГЈГ® Г°ГҐГ©Г­Г¤Г¦ГҐГ°Г <br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 50% ГіГ°Г®Г­Г <br>+35% ГёГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Г®ГІ Г ГІГ ГЄГЁ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ<br>Г‚Г ГёГҐ Г®Г°ГіГ¦ГЁГҐ Г­Г Г­Г®Г±ГЁГІ Г­Г  20% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г ", 4, 3);
 			}
 			else if(inv_ram==20){
-				invMes("Ржавая железная броня<br>Блокирует 10% урона", 0, 4);
+				invMes("ГђГ¦Г ГўГ Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 10% ГіГ°Г®Г­Г ", 0, 4);
 			}
 			else if(inv_ram==21){
-				invMes("Неплохая железная броня<br>Блокирует 20% урона", 1, 4);
+				invMes("ГЌГҐГЇГ«Г®ГµГ Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 20% ГіГ°Г®Г­Г ", 1, 4);
 			}
 			else if(inv_ram==22){
-				invMes("Прокованная железная броня<br>Блокирует 35% урона", 2, 4);
+				invMes("ГЏГ°Г®ГЄГ®ГўГ Г­Г­Г Гї Г¦ГҐГ«ГҐГ§Г­Г Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 35% ГіГ°Г®Г­Г ", 2, 4);
 			}
 			else if(inv_ram==23){
-				invMes("железный доспех Берсерка<br>Блокирует 40% урона<br>Ваше оружие наносит на 25% больше урона", 3, 4);
+				invMes("Г¦ГҐГ«ГҐГ§Г­Г»Г© Г¤Г®Г±ГЇГҐГµ ГЃГҐГ°Г±ГҐГ°ГЄГ <br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 40% ГіГ°Г®Г­Г <br>Г‚Г ГёГҐ Г®Г°ГіГ¦ГЁГҐ Г­Г Г­Г®Г±ГЁГІ Г­Г  25% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г ", 3, 4);
 			}
 			else if(inv_ram==24){
-				invMes("Латы Непобедимого рыцаря<br>Блокирует 80% урона", 4, 4);
+				invMes("Г‹Г ГІГ» ГЌГҐГЇГ®ГЎГҐГ¤ГЁГ¬Г®ГЈГ® Г°Г»Г¶Г Г°Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 80% ГіГ°Г®Г­Г ", 4, 4);
 			}
 			else if(inv_ram==25){
-				invMes("Поломанная золотая броня<br>Блокирует 6% урона", 0, 5);
+				invMes("ГЏГ®Г«Г®Г¬Г Г­Г­Г Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 6% ГіГ°Г®Г­Г ", 0, 5);
 			}
 			else if(inv_ram==26){
-				invMes("Хорошая золотая броня<br>Блокирует 15% урона", 1, 5);
+				invMes("Г•Г®Г°Г®ГёГ Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 15% ГіГ°Г®Г­Г ", 1, 5);
 			}
 			else if(inv_ram==27){
-				invMes("Надежная золотая броня<br>Блокирует 25% урона", 2, 5);
+				invMes("ГЌГ Г¤ГҐГ¦Г­Г Гї Г§Г®Г«Г®ГІГ Гї ГЎГ°Г®Г­Гї<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 25% ГіГ°Г®Г­Г ", 2, 5);
 			}
 			else if(inv_ram==28){
-				invMes("Проклятый золотой доспех<br>Блокирует 30% урона<br>Противники, атакующие вас в ближнем бою, получают урон,равный уровню навыка золотой брони<br>Ваши заклинания стоят на 25% больше маны", 3, 5);
+				invMes("ГЏГ°Г®ГЄГ«ГїГІГ»Г© Г§Г®Г«Г®ГІГ®Г© Г¤Г®Г±ГЇГҐГµ<br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 30% ГіГ°Г®Г­Г <br>ГЏГ°Г®ГІГЁГўГ­ГЁГЄГЁ, Г ГІГ ГЄГіГѕГ№ГЁГҐ ГўГ Г± Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ, ГЇГ®Г«ГіГ·Г ГѕГІ ГіГ°Г®Г­,Г°Г ГўГ­Г»Г© ГіГ°Г®ГўГ­Гѕ Г­Г ГўГ»ГЄГ  Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ГЁ<br>Г‚Г ГёГЁ Г§Г ГЄГ«ГЁГ­Г Г­ГЁГї Г±ГІГ®ГїГІ Г­Г  25% ГЎГ®Г«ГјГёГҐ Г¬Г Г­Г»", 3, 5);
 			}
 			else if(inv_ram==29){
-				invMes("Золотые латы Архимага<br>Блокирует 60% урона<br>Ваши заклинания наносят на 35% больше урона", 4, 5);
+				invMes("Г‡Г®Г«Г®ГІГ»ГҐ Г«Г ГІГ» ГЂГ°ГµГЁГ¬Г ГЈГ <br>ГЃГ«Г®ГЄГЁГ°ГіГҐГІ 60% ГіГ°Г®Г­Г <br>Г‚Г ГёГЁ Г§Г ГЄГ«ГЁГ­Г Г­ГЁГї Г­Г Г­Г®Г±ГїГІ Г­Г  35% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г ", 4, 5);
 			}
 			
 		}
@@ -3671,183 +3672,183 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>ВЛАДЕНИЕ МЕЧОМ<br>Уровень навыка: "+sword+"<br>С каждым уровнем навыка урон от атак мечом повышается на 5%<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>Г‚Г‹ГЂГ„Г…ГЌГ€Г… ГЊГ…Г—ГЋГЊ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+sword+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г ГІГ ГЄ Г¬ГҐГ·Г®Г¬ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=8;
-				gameX.mes.setText("<html>ВЛАДЕНИЕ МЕЧОМ<br>Уровень навыка: "+sword+"<br>С каждым уровнем навыка урон от атак мечом повышается на 5%<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>Г‚Г‹ГЂГ„Г…ГЌГ€Г… ГЊГ…Г—ГЋГЊ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+sword+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г ГІГ ГЄ Г¬ГҐГ·Г®Г¬ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==5){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>ВЛАДЕНИЕ ПАРНЫМИ КЛИНКАМИ<br>Уровень навыка: "+dual+"<br>С каждым уровнем навыка урон от атак парными клинками повышается на 5%<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>Г‚Г‹ГЂГ„Г…ГЌГ€Г… ГЏГЂГђГЌГ›ГЊГ€ ГЉГ‹Г€ГЌГЉГЂГЊГ€<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+dual+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г ГІГ ГЄ ГЇГ Г°Г­Г»Г¬ГЁ ГЄГ«ГЁГ­ГЄГ Г¬ГЁ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=9;
-				gameX.mes.setText("<html>ВЛАДЕНИЕ ПАРНЫМИ КЛИНКАМИ<br>Уровень навыка: "+dual+"<br>С каждым уровнем навыка урон от атак парными клинками повышается на 5%<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>Г‚Г‹ГЂГ„Г…ГЌГ€Г… ГЏГЂГђГЌГ›ГЊГ€ ГЉГ‹Г€ГЌГЉГЂГЊГ€<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+dual+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г ГІГ ГЄ ГЇГ Г°Г­Г»Г¬ГЁ ГЄГ«ГЁГ­ГЄГ Г¬ГЁ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==10){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>СТРЕЛЬБА ИЗ ЛУКА<br>Уровень навыка: "+bow+"<br>С каждым уровнем навыка урон от стрельбы из лука повышается на 5%<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>Г‘Г’ГђГ…Г‹ГњГЃГЂ Г€Г‡ Г‹Г“ГЉГЂ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+bow+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г±ГІГ°ГҐГ«ГјГЎГ» ГЁГ§ Г«ГіГЄГ  ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=10;
-				gameX.mes.setText("<html>СТРЕЛЬБА ИЗ ЛУКА<br>Уровень навыка: "+bow+"<br>С каждым уровнем навыка урон от стрельбы из лука повышается на 5%<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>Г‘Г’ГђГ…Г‹ГњГЃГЂ Г€Г‡ Г‹Г“ГЉГЂ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+bow+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  ГіГ°Г®Г­ Г®ГІ Г±ГІГ°ГҐГ«ГјГЎГ» ГЁГ§ Г«ГіГЄГ  ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==15){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>МАГИЯ<br>Уровень навыка: "+magic+"<br>С каждым уровнем навыка магический урон повышается на 5%<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>ГЊГЂГѓГ€Гџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+magic+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г¬Г ГЈГЁГ·ГҐГ±ГЄГЁГ© ГіГ°Г®Г­ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=11;
-				gameX.mes.setText("<html>МАГИЯ<br>Уровень навыка: "+magic+"<br>С каждым уровнем навыка магический урон повышается на 5%<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>ГЊГЂГѓГ€Гџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+magic+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г¬Г ГЈГЁГ·ГҐГ±ГЄГЁГ© ГіГ°Г®Г­ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==20){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>КОЖАНАЯ БРОНЯ<br>Уровень навыка: "+koja+"<br>С каждым уровнем навыка здоровье повышается на 3 ед., шанс уклонения в ближнем бою повышается на 1%<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>ГЉГЋГ†ГЂГЌГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+koja+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤., ГёГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  1%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=12;
-				gameX.mes.setText("<html>КОЖАНАЯ БРОНЯ<br>Уровень навыка: "+koja+"<br>С каждым уровнем навыка здоровье повышается на 3 ед., шанс уклонения в ближнем бою повышается на 1%<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>ГЉГЋГ†ГЂГЌГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+koja+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤., ГёГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  1%<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==25){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>ЖЕЛЕЗНАЯ БРОНЯ<br>Уровень навыка: "+iron+"<br>С каждым уровнем навыка здоровье повышается на 5 ед.<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>Г†Г…Г‹Г…Г‡ГЌГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+iron+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5 ГҐГ¤.<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=13;
-				gameX.mes.setText("<html>ЖЕЛЕЗНАЯ БРОНЯ<br>Уровень навыка: "+iron+"<br>С каждым уровнем навыка здоровье повышается на 5 ед.<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>Г†Г…Г‹Г…Г‡ГЌГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+iron+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  5 ГҐГ¤.<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			if(skills_ram==30){
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Повысить уровень навыка");
+				gameX.head.setText("ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ");
 				if(exp==0){
 				gameX.inMessage=3;
-				gameX.mes.setText("<html>ЗОЛОТАЯ БРОНЯ<br>Уровень навыка: "+gold+"<br>С каждым уровнем навыка здоровье повышается на 3 ед., мана повышается на 3 ед.<br>Свободных очков навыков: "+exp+"</html>");	
+				gameX.mes.setText("<html>Г‡ГЋГ‹ГЋГ’ГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+gold+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤., Г¬Г Г­Г  ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤.<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"</html>");	
 				}
 				else{
 				gameX.inMessage=14;
-				gameX.mes.setText("<html>ЗОЛОТАЯ БРОНЯ<br>Уровень навыка: "+gold+"<br>С каждым уровнем навыка здоровье повышается на 3 ед., мана повышается на 3 ед.<br>Свободных очков навыков: "+exp+"<br>Повысить уровень навыка?</html>");
+				gameX.mes.setText("<html>Г‡ГЋГ‹ГЋГ’ГЂГџ ГЃГђГЋГЌГџ<br>Г“Г°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+gold+"<br>Г‘ ГЄГ Г¦Г¤Г»Г¬ ГіГ°Г®ГўГ­ГҐГ¬ Г­Г ГўГ»ГЄГ  Г§Г¤Г®Г°Г®ГўГјГҐ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤., Г¬Г Г­Г  ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  3 ГҐГ¤.<br>Г‘ГўГ®ГЎГ®Г¤Г­Г»Гµ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+exp+"<br>ГЏГ®ГўГ»Г±ГЁГІГј ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ ?</html>");
 				}
 			}
 			else if(skills_ram==1){
-				skill("СМЕРТЕЛЬНОЕ РАНЕНИЕ","Каждая атака мечом с вероятностью 15% может нанести двойной урон",sword,1,0);
+				skill("Г‘ГЊГ…ГђГ’Г…Г‹ГњГЌГЋГ… ГђГЂГЌГ…ГЌГ€Г…","ГЉГ Г¦Г¤Г Гї Г ГІГ ГЄГ  Г¬ГҐГ·Г®Г¬ Г± ГўГҐГ°Г®ГїГІГ­Г®Г±ГІГјГѕ 15% Г¬Г®Г¦ГҐГІ Г­Г Г­ГҐГ±ГІГЁ Г¤ГўГ®Г©Г­Г®Г© ГіГ°Г®Г­",sword,1,0);
 			}
 			else if(skills_ram==2){
-				skill("ЗНАНИЕ МЕЧА","Вы получаете на 25% меньше урона от атак мечом",sword,10,0);
+				skill("Г‡ГЌГЂГЌГ€Г… ГЊГ…Г—ГЂ","Г‚Г» ГЇГ®Г«ГіГ·Г ГҐГІГҐ Г­Г  25% Г¬ГҐГ­ГјГёГҐ ГіГ°Г®Г­Г  Г®ГІ Г ГІГ ГЄ Г¬ГҐГ·Г®Г¬",sword,10,0);
 			}
 			else if(skills_ram==3){
-				skill("ПРОБИВАЮЩИЙ УДАР","Атаки мечом наносят половину урона противнику за целью атаки",sword,20,0);
+				skill("ГЏГђГЋГЃГ€Г‚ГЂГћГ™Г€Г‰ Г“Г„ГЂГђ","ГЂГІГ ГЄГЁ Г¬ГҐГ·Г®Г¬ Г­Г Г­Г®Г±ГїГІ ГЇГ®Г«Г®ГўГЁГ­Гі ГіГ°Г®Г­Г  ГЇГ°Г®ГІГЁГўГ­ГЁГЄГі Г§Г  Г¶ГҐГ«ГјГѕ Г ГІГ ГЄГЁ",sword,20,0);
 			}
 			else if(skills_ram==4){
-				skill("ВАМПИРИЧЕСКАЯ АТАКА","Атаки мечом восстанавливают здоровье в размере "+vamp+"% от нанесенного основной цели урона",sword,30,0);
+				skill("Г‚ГЂГЊГЏГ€ГђГ€Г—Г…Г‘ГЉГЂГџ ГЂГ’ГЂГЉГЂ","ГЂГІГ ГЄГЁ Г¬ГҐГ·Г®Г¬ ГўГ®Г±Г±ГІГ Г­Г ГўГ«ГЁГўГ ГѕГІ Г§Г¤Г®Г°Г®ГўГјГҐ Гў Г°Г Г§Г¬ГҐГ°ГҐ "+vamp+"% Г®ГІ Г­Г Г­ГҐГ±ГҐГ­Г­Г®ГЈГ® Г®Г±Г­Г®ГўГ­Г®Г© Г¶ГҐГ«ГЁ ГіГ°Г®Г­Г ",sword,30,0);
 			}
 			else if(skills_ram==6){
-				skill("ДВОЙНЫЕ УДАРЫ","Можно создавать и использовать парные клинки",dual,1,1);
+				skill("Г„Г‚ГЋГ‰ГЌГ›Г… Г“Г„ГЂГђГ›","ГЊГ®Г¦Г­Г® Г±Г®Г§Г¤Г ГўГ ГІГј ГЁ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ",dual,1,1);
 			}
 			else if(skills_ram==7){
-				skill("ЗНАНИЕ ПАРНЫХ КЛИНКОВ","Вы получаете на 25% меньше урона от атак парными клинками",dual,10,1);
+				skill("Г‡ГЌГЂГЌГ€Г… ГЏГЂГђГЌГ›Г• ГЉГ‹Г€ГЌГЉГЋГ‚","Г‚Г» ГЇГ®Г«ГіГ·Г ГҐГІГҐ Г­Г  25% Г¬ГҐГ­ГјГёГҐ ГіГ°Г®Г­Г  Г®ГІ Г ГІГ ГЄ ГЇГ Г°Г­Г»Г¬ГЁ ГЄГ«ГЁГ­ГЄГ Г¬ГЁ",dual,10,1);
 			}
 			else if(skills_ram==8){
-				skill("ДВОЙНОЕ БЛОКИРОВАНИЕ","Вы получаете на 15% меньше урона от атак любым оружием, если носите парные клинки",dual,20,1);
+				skill("Г„Г‚ГЋГ‰ГЌГЋГ… ГЃГ‹ГЋГЉГ€ГђГЋГ‚ГЂГЌГ€Г…","Г‚Г» ГЇГ®Г«ГіГ·Г ГҐГІГҐ Г­Г  15% Г¬ГҐГ­ГјГёГҐ ГіГ°Г®Г­Г  Г®ГІ Г ГІГ ГЄ Г«ГѕГЎГ»Г¬ Г®Г°ГіГ¦ГЁГҐГ¬, ГҐГ±Г«ГЁ Г­Г®Г±ГЁГІГҐ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ",dual,20,1);
 			}
 			else if(skills_ram==9){
-				skill("ВИХРЬ КЛИНКОВ","Противники на 4-х соседних клетках дополнительно получают 20% урона от атак парными клинками",dual,30,1);
+				skill("Г‚Г€Г•ГђГњ ГЉГ‹Г€ГЌГЉГЋГ‚","ГЏГ°Г®ГІГЁГўГ­ГЁГЄГЁ Г­Г  4-Гµ Г±Г®Г±ГҐГ¤Г­ГЁГµ ГЄГ«ГҐГІГЄГ Гµ Г¤Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г® ГЇГ®Г«ГіГ·Г ГѕГІ 20% ГіГ°Г®Г­Г  Г®ГІ Г ГІГ ГЄ ГЇГ Г°Г­Г»Г¬ГЁ ГЄГ«ГЁГ­ГЄГ Г¬ГЁ",dual,30,1);
 			}
 			else if(skills_ram==11){
-				skill("ЛУК И СТРЕЛЫ","Можно пользоваться луком - он позволяет наносить урон противникам на расстоянии. Для стрельбы из лука используйте клавиши W,A,S,D",bow,1,2);
+				skill("Г‹Г“ГЉ Г€ Г‘Г’ГђГ…Г‹Г›","ГЊГ®Г¦Г­Г® ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї Г«ГіГЄГ®Г¬ - Г®Г­ ГЇГ®Г§ГўГ®Г«ГїГҐГІ Г­Г Г­Г®Г±ГЁГІГј ГіГ°Г®Г­ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Г­Г  Г°Г Г±Г±ГІГ®ГїГ­ГЁГЁ. Г„Г«Гї Г±ГІГ°ГҐГ«ГјГЎГ» ГЁГ§ Г«ГіГЄГ  ГЁГ±ГЇГ®Г«ГјГ§ГіГ©ГІГҐ ГЄГ«Г ГўГЁГёГЁ W,A,S,D",bow,1,2);
 			}
 			else if(skills_ram==12){
-				skill("УКЛОНЕНИЕ ОТ СТРЕЛ","Шанс уклонения от вражеских стрел повышается на 35%",bow,10,2);
+				skill("Г“ГЉГ‹ГЋГЌГ…ГЌГ€Г… ГЋГ’ Г‘Г’ГђГ…Г‹","ГГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Г®ГІ ГўГ°Г Г¦ГҐГ±ГЄГЁГµ Г±ГІГ°ГҐГ« ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  35%",bow,10,2);
 			}
 			else if(skills_ram==13){
-				skill("МГНОВЕННЫЙ ВЫСТРЕЛ","Атаки луком наносят полный урон в ближнем бою",bow,20,2);
+				skill("ГЊГѓГЌГЋГ‚Г…ГЌГЌГ›Г‰ Г‚Г›Г‘Г’ГђГ…Г‹","ГЂГІГ ГЄГЁ Г«ГіГЄГ®Г¬ Г­Г Г­Г®Г±ГїГІ ГЇГ®Г«Г­Г»Г© ГіГ°Г®Г­ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ",bow,20,2);
 			}
 			else if(skills_ram==14){
-				skill("УПРАВЛЕНИЕ ВЕТРОМ","Деревья больше не мешают полёту стрелы",bow,30,2);
+				skill("Г“ГЏГђГЂГ‚Г‹Г…ГЌГ€Г… Г‚Г…Г’ГђГЋГЊ","Г„ГҐГ°ГҐГўГјГї ГЎГ®Г«ГјГёГҐ Г­ГҐ Г¬ГҐГёГ ГѕГІ ГЇГ®Г«ВёГІГі Г±ГІГ°ГҐГ«Г»",bow,30,2);
 			}
 			else if(skills_ram==16){
-				skill("ОГНЕННЫЙ ШАР","Нажмите клавишу W,A,S,D, не используя лук, чтобы запустить огненный шар, летящий на 3 клетки и наносящий 16 ед. урона первому противнику или уничтожающий дерево. Стоимость: 30 ед. маны",magic,1,3);
+				skill("ГЋГѓГЌГ…ГЌГЌГ›Г‰ ГГЂГђ","ГЌГ Г¦Г¬ГЁГІГҐ ГЄГ«Г ГўГЁГёГі W,A,S,D, Г­ГҐ ГЁГ±ГЇГ®Г«ГјГ§ГіГї Г«ГіГЄ, Г·ГІГ®ГЎГ» Г§Г ГЇГіГ±ГІГЁГІГј Г®ГЈГ­ГҐГ­Г­Г»Г© ГёГ Г°, Г«ГҐГІГїГ№ГЁГ© Г­Г  3 ГЄГ«ГҐГІГЄГЁ ГЁ Г­Г Г­Г®Г±ГїГ№ГЁГ© 16 ГҐГ¤. ГіГ°Г®Г­Г  ГЇГҐГ°ГўГ®Г¬Гі ГЇГ°Г®ГІГЁГўГ­ГЁГЄГі ГЁГ«ГЁ ГіГ­ГЁГ·ГІГ®Г¦Г ГѕГ№ГЁГ© Г¤ГҐГ°ГҐГўГ®. Г‘ГІГ®ГЁГ¬Г®Г±ГІГј: 30 ГҐГ¤. Г¬Г Г­Г»",magic,1,3);
 			}
 			else if(skills_ram==17){
-				skill("ПЫЛАЮЩЕЕ ОРУЖИЕ","Ваше оружие пылает огнём, при каждой атаке дополнительно нанося 10 ед. урона.",magic,10,3);
+				skill("ГЏГ›Г‹ГЂГћГ™Г…Г… ГЋГђГ“Г†Г€Г…","Г‚Г ГёГҐ Г®Г°ГіГ¦ГЁГҐ ГЇГ»Г«Г ГҐГІ Г®ГЈГ­ВёГ¬, ГЇГ°ГЁ ГЄГ Г¦Г¤Г®Г© Г ГІГ ГЄГҐ Г¤Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г® Г­Г Г­Г®Г±Гї 10 ГҐГ¤. ГіГ°Г®Г­Г .",magic,10,3);
 			}
 			else if(skills_ram==18){
-				skill("ЛЕДЯНЫЕ ОБЪЯТИЯ","Нажмите F, чтобы нанести противникам на 4-х соседних клетках 10 ед. урона и восстановить здоровье, равное половине нанесенного этим заклинанием урона. Пораженные противники пропускают свой ход. Стоимость: 45 ед. маны.",magic,20,3);
+				skill("Г‹Г…Г„ГџГЌГ›Г… ГЋГЃГљГџГ’Г€Гџ","ГЌГ Г¦Г¬ГЁГІГҐ F, Г·ГІГ®ГЎГ» Г­Г Г­ГҐГ±ГІГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Г­Г  4-Гµ Г±Г®Г±ГҐГ¤Г­ГЁГµ ГЄГ«ГҐГІГЄГ Гµ 10 ГҐГ¤. ГіГ°Г®Г­Г  ГЁ ГўГ®Г±Г±ГІГ Г­Г®ГўГЁГІГј Г§Г¤Г®Г°Г®ГўГјГҐ, Г°Г ГўГ­Г®ГҐ ГЇГ®Г«Г®ГўГЁГ­ГҐ Г­Г Г­ГҐГ±ГҐГ­Г­Г®ГЈГ® ГЅГІГЁГ¬ Г§Г ГЄГ«ГЁГ­Г Г­ГЁГҐГ¬ ГіГ°Г®Г­Г . ГЏГ®Г°Г Г¦ГҐГ­Г­Г»ГҐ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГЁ ГЇГ°Г®ГЇГіГ±ГЄГ ГѕГІ Г±ГўГ®Г© ГµГ®Г¤. Г‘ГІГ®ГЁГ¬Г®Г±ГІГј: 45 ГҐГ¤. Г¬Г Г­Г».",magic,20,3);
 			}
 			else if(skills_ram==19){
-				skill("ВЫСОКОЕ НАПРЯЖЕНИЕ","Нажмите R, чтобы нанести противникам в радиусе 2-х клеток 20 ед. урона. Стоимость: 90 ед. маны.",magic,30,3);
+				skill("Г‚Г›Г‘ГЋГЉГЋГ… ГЌГЂГЏГђГџГ†Г…ГЌГ€Г…","ГЌГ Г¦Г¬ГЁГІГҐ R, Г·ГІГ®ГЎГ» Г­Г Г­ГҐГ±ГІГЁ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Гў Г°Г Г¤ГЁГіГ±ГҐ 2-Гµ ГЄГ«ГҐГІГ®ГЄ 20 ГҐГ¤. ГіГ°Г®Г­Г . Г‘ГІГ®ГЁГ¬Г®Г±ГІГј: 90 ГҐГ¤. Г¬Г Г­Г».",magic,30,3);
 			}
 			else if(skills_ram==21){
-				skill("ВТОРАЯ КОЖА","Можно пользоваться кожаной бронёй",koja,1,4);
+				skill("Г‚Г’ГЋГђГЂГџ ГЉГЋГ†ГЂ","ГЊГ®Г¦Г­Г® ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї ГЄГ®Г¦Г Г­Г®Г© ГЎГ°Г®Г­ВёГ©",koja,1,4);
 			}
 			else if(skills_ram==22){
-				skill("БЫСТРАЯ РЕАКЦИЯ","Шанс уклонения от атаки в ближнем бою повышается на 15%. Бонус работает только при ношении кожаной брони",koja,10,4);
+				skill("ГЃГ›Г‘Г’ГђГЂГџ ГђГ…ГЂГЉГ–Г€Гџ","ГГ Г­Г± ГіГЄГ«Г®Г­ГҐГ­ГЁГї Г®ГІ Г ГІГ ГЄГЁ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ ГЇГ®ГўГ»ГёГ ГҐГІГ±Гї Г­Г  15%. ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ ГЄГ®Г¦Г Г­Г®Г© ГЎГ°Г®Г­ГЁ",koja,10,4);
 			}
 			else if(skills_ram==23){
-				skill("ЗНАНИЕ КОЖАНОЙ БРОНИ","Ваши атаки в ближнем бою наносят на 50% больше урона противникам в кожаной броне или без брони",koja,20,4);
+				skill("Г‡ГЌГЂГЌГ€Г… ГЉГЋГ†ГЂГЌГЋГ‰ ГЃГђГЋГЌГ€","Г‚Г ГёГЁ Г ГІГ ГЄГЁ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ Г­Г Г­Г®Г±ГїГІ Г­Г  50% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г  ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Гў ГЄГ®Г¦Г Г­Г®Г© ГЎГ°Г®Г­ГҐ ГЁГ«ГЁ ГЎГҐГ§ ГЎГ°Г®Г­ГЁ",koja,20,4);
 			}
 			else if(skills_ram==24){
-				skill("ТОЧНЫЕ УДАРЫ","Ваши атаки наносят на 35% больше урона. Бонус работает только при ношении кожаной брони",koja,30,4);
+				skill("Г’ГЋГ—ГЌГ›Г… Г“Г„ГЂГђГ›","Г‚Г ГёГЁ Г ГІГ ГЄГЁ Г­Г Г­Г®Г±ГїГІ Г­Г  35% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г . ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ ГЄГ®Г¦Г Г­Г®Г© ГЎГ°Г®Г­ГЁ",koja,30,4);
 			}
 			else if(skills_ram==26){
-				skill("ЖЕЛЕЗНЫЙ ПАНЦИРЬ","Можно пользоваться железной бронёй",iron,1,5);
+				skill("Г†Г…Г‹Г…Г‡ГЌГ›Г‰ ГЏГЂГЌГ–Г€ГђГњ","ГЊГ®Г¦Г­Г® ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї Г¦ГҐГ«ГҐГ§Г­Г®Г© ГЎГ°Г®Г­ВёГ©",iron,1,5);
 			}
 			else if(skills_ram==27){
-				skill("НЕПРОБИВАЕМЫЙ БАСТИОН","Вы получаете на 25% меньше урона от вражеских атак. Бонус работает только при ношении железной брони",iron,10,5);
+				skill("ГЌГ…ГЏГђГЋГЃГ€Г‚ГЂГ…ГЊГ›Г‰ ГЃГЂГ‘Г’Г€ГЋГЌ","Г‚Г» ГЇГ®Г«ГіГ·Г ГҐГІГҐ Г­Г  25% Г¬ГҐГ­ГјГёГҐ ГіГ°Г®Г­Г  Г®ГІ ГўГ°Г Г¦ГҐГ±ГЄГЁГµ Г ГІГ ГЄ. ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ Г¦ГҐГ«ГҐГ§Г­Г®Г© ГЎГ°Г®Г­ГЁ",iron,10,5);
 			}
 			else if(skills_ram==28){
-				skill("ЗНАНИЕ ЖЕЛЕЗНОЙ БРОНИ","Ваши атаки в ближнем бою наносят на 40% больше урона противникам в железной или золотой броне",iron,20,5);
+				skill("Г‡ГЌГЂГЌГ€Г… Г†Г…Г‹Г…Г‡ГЌГЋГ‰ ГЃГђГЋГЌГ€","Г‚Г ГёГЁ Г ГІГ ГЄГЁ Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ Г­Г Г­Г®Г±ГїГІ Г­Г  40% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г  ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ Гў Г¦ГҐГ«ГҐГ§Г­Г®Г© ГЁГ«ГЁ Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ГҐ",iron,20,5);
 			}
 			else if(skills_ram==29){
-				skill("ПЕРЕДЫШКА","Если рядом находится враг, каждый ход вы восстанавливаете 5 ед. здоровья. Бонус работает только при ношении железной брони",iron,30,5);
+				skill("ГЏГ…ГђГ…Г„Г›ГГЉГЂ","Г…Г±Г«ГЁ Г°ГїГ¤Г®Г¬ Г­Г ГµГ®Г¤ГЁГІГ±Гї ГўГ°Г ГЈ, ГЄГ Г¦Г¤Г»Г© ГµГ®Г¤ ГўГ» ГўГ®Г±Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІГҐ 5 ГҐГ¤. Г§Г¤Г®Г°Г®ГўГјГї. ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ Г¦ГҐГ«ГҐГ§Г­Г®Г© ГЎГ°Г®Г­ГЁ",iron,30,5);
 			}
 			else if(skills_ram==31){
-				skill("ЗОЛОТЫЕ ДОСПЕХИ","Можно пользоваться золотой бронёй",gold,1,6);
+				skill("Г‡ГЋГ‹ГЋГ’Г›Г… Г„ГЋГ‘ГЏГ…Г•Г€","ГЊГ®Г¦Г­Г® ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ВёГ©",gold,1,6);
 			}
 			else if(skills_ram==32){
-				skill("ЭКОНОМИЯ МАНЫ","Ваши заклинания требуют на 25% меньше маны. Бонус работает только при ношении золотой брони",gold,10,6);
+				skill("ГќГЉГЋГЌГЋГЊГ€Гџ ГЊГЂГЌГ›","Г‚Г ГёГЁ Г§Г ГЄГ«ГЁГ­Г Г­ГЁГї ГІГ°ГҐГЎГіГѕГІ Г­Г  25% Г¬ГҐГ­ГјГёГҐ Г¬Г Г­Г». ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ГЁ",gold,10,6);
 			}
 			else if(skills_ram==33){
-				skill("УСИЛЕНИЕ ЗАКЛИНАНИЙ","Ваша магия наносит на 35% больше урона. Бонус работает только при ношении золотой брони",gold,20,6);
+				skill("Г“Г‘Г€Г‹Г…ГЌГ€Г… Г‡ГЂГЉГ‹Г€ГЌГЂГЌГ€Г‰","Г‚Г ГёГ  Г¬Г ГЈГЁГї Г­Г Г­Г®Г±ГЁГІ Г­Г  35% ГЎГ®Г«ГјГёГҐ ГіГ°Г®Г­Г . ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ГЁ",gold,20,6);
 			}
 			else if(skills_ram==34){
-				skill("ПОГЛОЩЕНИЕ МАГИИ","Каждое убийство восстанавливает 30% от максимального запаса маны. Бонус работает только при ношении золотой брони",gold,30,6);
+				skill("ГЏГЋГѓГ‹ГЋГ™Г…ГЌГ€Г… ГЊГЂГѓГ€Г€","ГЉГ Г¦Г¤Г®ГҐ ГіГЎГЁГ©Г±ГІГўГ® ГўГ®Г±Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІ 30% Г®ГІ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГЈГ® Г§Г ГЇГ Г±Г  Г¬Г Г­Г». ГЃГ®Г­ГіГ± Г°Г ГЎГ®ГІГ ГҐГІ ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ Г­Г®ГёГҐГ­ГЁГЁ Г§Г®Г«Г®ГІГ®Г© ГЎГ°Г®Г­ГЁ",gold,30,6);
 			}
 		}
 		mhp=100;
@@ -3910,7 +3911,7 @@ public class okno extends JFrame{
 		gameX.timerDraw.start();
 		try(FileReader reader = new FileReader("./Pasan_Campaign/profile.pasan"))
         {
-           // читаем посимвольно
+           // Г·ГЁГІГ ГҐГ¬ ГЇГ®Г±ГЁГ¬ГўГ®Г«ГјГ­Г®
             int d;
             while((d=reader.read())!=-1){
                  
@@ -3929,7 +3930,7 @@ public class okno extends JFrame{
 			profreader();
 		try(FileReader reader = new FileReader("./Pasan_UserMaps/"+name+".pasan"))
         {
-           // читаем посимвольно
+           // Г·ГЁГІГ ГҐГ¬ ГЇГ®Г±ГЁГ¬ГўГ®Г«ГјГ­Г®
             int c;
             while((c=reader.read())!=-1){
                  
@@ -3963,8 +3964,8 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(true);
-				gameX.head.setText("Кампания");
-				gameX.mes.setText("<html>Теперь вы можете сами выбрать, какой уровень кампании пройти!<br>Просто введите его номер (от 0 до 24).</html>");
+				gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+				gameX.mes.setText("<html>Г’ГҐГЇГҐГ°Гј ГўГ» Г¬Г®Г¦ГҐГІГҐ Г±Г Г¬ГЁ ГўГ»ГЎГ°Г ГІГј, ГЄГ ГЄГ®Г© ГіГ°Г®ГўГҐГ­Гј ГЄГ Г¬ГЇГ Г­ГЁГЁ ГЇГ°Г®Г©ГІГЁ!<br>ГЏГ°Г®Г±ГІГ® ГўГўГҐГ¤ГЁГІГҐ ГҐГЈГ® Г­Г®Г¬ГҐГ° (Г®ГІ 0 Г¤Г® 24).</html>");
 				gameX.textField.setText("");
 				gameX.textField.requestFocus();
 				gameX.textField.addKeyListener(keylis1);
@@ -3975,32 +3976,32 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Кампания");
-				gameX.mes.setText("<html>Добро пожаловать в Pasan!<br>Цель игры - добраться до конечной точки, отмеченной зеленой стрелкой. Для передвижения используйте клавиши-стрелки. Вы можете передвигаться только по каменной дороге.<br>Удачной игры!</html>");
+				gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+				gameX.mes.setText("<html>Г„Г®ГЎГ°Г® ГЇГ®Г¦Г Г«Г®ГўГ ГІГј Гў Pasan!<br>Г–ГҐГ«Гј ГЁГЈГ°Г» - Г¤Г®ГЎГ°Г ГІГјГ±Гї Г¤Г® ГЄГ®Г­ГҐГ·Г­Г®Г© ГІГ®Г·ГЄГЁ, Г®ГІГ¬ГҐГ·ГҐГ­Г­Г®Г© Г§ГҐГ«ГҐГ­Г®Г© Г±ГІГ°ГҐГ«ГЄГ®Г©. Г„Г«Гї ГЇГҐГ°ГҐГ¤ГўГЁГ¦ГҐГ­ГЁГї ГЁГ±ГЇГ®Г«ГјГ§ГіГ©ГІГҐ ГЄГ«Г ГўГЁГёГЁ-Г±ГІГ°ГҐГ«ГЄГЁ. Г‚Г» Г¬Г®Г¦ГҐГІГҐ ГЇГҐГ°ГҐГ¤ГўГЁГЈГ ГІГјГ±Гї ГІГ®Г«ГјГЄГ® ГЇГ® ГЄГ Г¬ГҐГ­Г­Г®Г© Г¤Г®Г°Г®ГЈГҐ.<br>Г“Г¤Г Г·Г­Г®Г© ГЁГЈГ°Г»!</html>");
 			}
 			else if((CampFinished==0)&(Integer.parseInt(name)==1)){
 				gameX.inMessage=18;
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Обучение");
-				gameX.mes.setText("<html>В сундуках вы можете найти различное оружие и броню. Более сильное снаряжение встречается реже, чем слабое. Чтобы открыть инвентарь, нажмите клавишу Е.</html>");
+				gameX.head.setText("ГЋГЎГіГ·ГҐГ­ГЁГҐ");
+				gameX.mes.setText("<html>Г‚ Г±ГіГ­Г¤ГіГЄГ Гµ ГўГ» Г¬Г®Г¦ГҐГІГҐ Г­Г Г©ГІГЁ Г°Г Г§Г«ГЁГ·Г­Г®ГҐ Г®Г°ГіГ¦ГЁГҐ ГЁ ГЎГ°Г®Г­Гѕ. ГЃГ®Г«ГҐГҐ Г±ГЁГ«ГјГ­Г®ГҐ Г±Г­Г Г°ГїГ¦ГҐГ­ГЁГҐ ГўГ±ГІГ°ГҐГ·Г ГҐГІГ±Гї Г°ГҐГ¦ГҐ, Г·ГҐГ¬ Г±Г«Г ГЎГ®ГҐ. Г—ГІГ®ГЎГ» Г®ГІГЄГ°Г»ГІГј ГЁГ­ГўГҐГ­ГІГ Г°Гј, Г­Г Г¦Г¬ГЁГІГҐ ГЄГ«Г ГўГЁГёГі Г….</html>");
 			}
 			else if((CampFinished==0)&(Integer.parseInt(name)==2)){
 				gameX.inMessage=19;
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Обучение");
-				gameX.mes.setText("<html>Победа над противниками приносит вам очки навыков. Вы можете использовать их, чтобы улучшать свои навыки. На 1, 10, 20 и 30 уровнях навыка вы открываете новые умения. Нажмите Е в меню инвентаря, чтобы открыть меню навыков.</html>");
+				gameX.head.setText("ГЋГЎГіГ·ГҐГ­ГЁГҐ");
+				gameX.mes.setText("<html>ГЏГ®ГЎГҐГ¤Г  Г­Г Г¤ ГЇГ°Г®ГІГЁГўГ­ГЁГЄГ Г¬ГЁ ГЇГ°ГЁГ­Г®Г±ГЁГІ ГўГ Г¬ Г®Г·ГЄГЁ Г­Г ГўГ»ГЄГ®Гў. Г‚Г» Г¬Г®Г¦ГҐГІГҐ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј ГЁГµ, Г·ГІГ®ГЎГ» ГіГ«ГіГ·ГёГ ГІГј Г±ГўГ®ГЁ Г­Г ГўГ»ГЄГЁ. ГЌГ  1, 10, 20 ГЁ 30 ГіГ°Г®ГўГ­ГїГµ Г­Г ГўГ»ГЄГ  ГўГ» Г®ГІГЄГ°Г»ГўГ ГҐГІГҐ Г­Г®ГўГ»ГҐ ГіГ¬ГҐГ­ГЁГї. ГЌГ Г¦Г¬ГЁГІГҐ Г… Гў Г¬ГҐГ­Гѕ ГЁГ­ГўГҐГ­ГІГ Г°Гї, Г·ГІГ®ГЎГ» Г®ГІГЄГ°Г»ГІГј Г¬ГҐГ­Гѕ Г­Г ГўГ»ГЄГ®Гў.</html>");
 			}
 			else{
 				gameX.inMessage=3;
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Кампания");
-				gameX.mes.setText("<html>Уровень "+name+"</html>");
+				gameX.head.setText("ГЉГ Г¬ГЇГ Г­ГЁГї");
+				gameX.mes.setText("<html>Г“Г°Г®ГўГҐГ­Гј "+name+"</html>");
 			}
 			if((CampFinished==1)&(Integer.parseInt(name)==0)){
 				eqweapon=0;
@@ -4052,7 +4053,7 @@ public class okno extends JFrame{
 			if(CampFinished<2){
 			try(FileReader reader = new FileReader("./Pasan_Campaign/"+name+".pasan"))
 	        {
-	           // читаем посимвольно
+	           // Г·ГЁГІГ ГҐГ¬ ГЇГ®Г±ГЁГ¬ГўГ®Г«ГјГ­Г®
 	            int c;
 	            while((c=reader.read())!=-1){
 	                 
@@ -4120,7 +4121,7 @@ public class okno extends JFrame{
 	public void loadMap(){
 		try(FileReader reader = new FileReader("./Pasan_Campaign/"+name+".pasan"))
         {
-           // читаем посимвольно
+           // Г·ГЁГІГ ГҐГ¬ ГЇГ®Г±ГЁГ¬ГўГ®Г«ГјГ­Г®
             int c;
             while((c=reader.read())!=-1){
                  
@@ -4195,7 +4196,7 @@ public class okno extends JFrame{
 			gameX.head.setVisible(true);
 			gameX.textField.setVisible(false);
 			gameX.head.setText(skillname);
-			gameX.mes.setText("<html>"+desc+"<br>Необходимый уровень навыка: "+lev+"<br>Не хватает очков навыков: "+((lev-skill)-exp)+".</html>");
+			gameX.mes.setText("<html>"+desc+"<br>ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г»Г© ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ : "+lev+"<br>ГЌГҐ ГµГўГ ГІГ ГҐГІ Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў: "+((lev-skill)-exp)+".</html>");
 			}
 			else{
 				gameX.inMessage=15;
@@ -4203,7 +4204,7 @@ public class okno extends JFrame{
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
 				gameX.head.setText(skillname);
-				gameX.mes.setText("<html>"+desc+"<br>Потратить "+(lev-skill)+" очков навыков для изучения умения?</html>");
+				gameX.mes.setText("<html>"+desc+"<br>ГЏГ®ГІГ°Г ГІГЁГІГј "+(lev-skill)+" Г®Г·ГЄГ®Гў Г­Г ГўГ»ГЄГ®Гў Г¤Г«Гї ГЁГ§ГіГ·ГҐГ­ГЁГї ГіГ¬ГҐГ­ГЁГї?</html>");
 			}
 			}
 			else{
@@ -4212,7 +4213,7 @@ public class okno extends JFrame{
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
 				gameX.head.setText(skillname);
-				gameX.mes.setText("<html>"+desc+"<br>Умение изучено.</html>");
+				gameX.mes.setText("<html>"+desc+"<br>Г“Г¬ГҐГ­ГЁГҐ ГЁГ§ГіГ·ГҐГ­Г®.</html>");
 					
 			}
 		
@@ -4257,16 +4258,16 @@ public class okno extends JFrame{
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Сокровище");
-		gameX.mes.setText("<html>Вы нашли:<br>"+itemName+".</html>");
+		gameX.head.setText("Г‘Г®ГЄГ°Г®ГўГЁГ№ГҐ");
+		gameX.mes.setText("<html>Г‚Г» Г­Г ГёГ«ГЁ:<br>"+itemName+".</html>");
 	}
 	public void chestMesDual(String itemName){
 		gameX.inMessage=3;
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Сокровище");
-		gameX.mes.setText("<html>Вы нашли:<br>"+itemName+".<br>У вас уже два или более таких меча!<br>Создайте из них парные клинки в инвентаре.</html>");
+		gameX.head.setText("Г‘Г®ГЄГ°Г®ГўГЁГ№ГҐ");
+		gameX.mes.setText("<html>Г‚Г» Г­Г ГёГ«ГЁ:<br>"+itemName+".<br>Г“ ГўГ Г± ГіГ¦ГҐ Г¤ГўГ  ГЁГ«ГЁ ГЎГ®Г«ГҐГҐ ГІГ ГЄГЁГµ Г¬ГҐГ·Г !<br>Г‘Г®Г§Г¤Г Г©ГІГҐ ГЁГ§ Г­ГЁГµ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ Гў ГЁГ­ГўГҐГ­ГІГ Г°ГҐ.</html>");
 	}
 	public void invMes(String desc,int x, int y){
 		invxx=x;
@@ -4274,7 +4275,7 @@ public class okno extends JFrame{
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Смена экипировки");
+		gameX.head.setText("Г‘Г¬ГҐГ­Г  ГЅГЄГЁГЇГЁГ°Г®ГўГЄГЁ");
 		if(inventory[x][y]>0){
 		boolean canEquip=false;
 		if(y==0){
@@ -4310,16 +4311,16 @@ public class okno extends JFrame{
 			gameX.mes.setVisible(true);
 			gameX.head.setVisible(true);
 			gameX.textField.setVisible(false);
-			gameX.head.setText("Выбор экипировки");
-			gameX.mes.setText("<html>"+desc+"<br>В инвентаре: "+inventory[x][y]+".<br>Экипировать?</html>");
+			gameX.head.setText("Г‚Г»ГЎГ®Г° ГЅГЄГЁГЇГЁГ°Г®ГўГЄГЁ");
+			gameX.mes.setText("<html>"+desc+"<br>Г‚ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ: "+inventory[x][y]+".<br>ГќГЄГЁГЇГЁГ°Г®ГўГ ГІГј?</html>");
 		}
 		else{
 			gameX.inMessage=3;
 			gameX.mes.setVisible(true);
 			gameX.head.setVisible(true);
 			gameX.textField.setVisible(false);
-			gameX.head.setText("Выбор экипировки");
-		gameX.mes.setText("<html>"+desc+"<br>В инвентаре: "+inventory[x][y]+".<br>Недостаточный уровень навыка.</html>");
+			gameX.head.setText("Г‚Г»ГЎГ®Г° ГЅГЄГЁГЇГЁГ°Г®ГўГЄГЁ");
+		gameX.mes.setText("<html>"+desc+"<br>Г‚ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ: "+inventory[x][y]+".<br>ГЌГҐГ¤Г®Г±ГІГ ГІГ®Г·Г­Г»Г© ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ .</html>");
 			
 		}
 		}
@@ -4328,8 +4329,8 @@ public class okno extends JFrame{
 		gameX.mes.setVisible(true);
 		gameX.head.setVisible(true);
 		gameX.textField.setVisible(false);
-		gameX.head.setText("Выбор экипировки");
-		gameX.mes.setText("<html>"+desc+"<br>В инвентаре нет этой экипировки.</html>");
+		gameX.head.setText("Г‚Г»ГЎГ®Г° ГЅГЄГЁГЇГЁГ°Г®ГўГЄГЁ");
+		gameX.mes.setText("<html>"+desc+"<br>Г‚ ГЁГ­ГўГҐГ­ГІГ Г°ГҐ Г­ГҐГІ ГЅГІГ®Г© ГЅГЄГЁГЇГЁГ°Г®ГўГЄГЁ.</html>");
 			
 		}
 		else if(y==1){
@@ -4338,24 +4339,24 @@ public class okno extends JFrame{
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Создание парных клинков");
-				gameX.mes.setText("<html>"+desc+"<br>Объединить два меча в эти парные клинки?</html>");
+				gameX.head.setText("Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЇГ Г°Г­Г»Гµ ГЄГ«ГЁГ­ГЄГ®Гў");
+				gameX.mes.setText("<html>"+desc+"<br>ГЋГЎГєГҐГ¤ГЁГ­ГЁГІГј Г¤ГўГ  Г¬ГҐГ·Г  Гў ГЅГІГЁ ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ?</html>");
 			}
 			else if(inventory[x][0]>=2){
 				gameX.inMessage=3;
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Создание парных клинков");
-				gameX.mes.setText("<html>"+desc+"<br>Недостаточный уровень навыка.</html>");
+				gameX.head.setText("Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЇГ Г°Г­Г»Гµ ГЄГ«ГЁГ­ГЄГ®Гў");
+				gameX.mes.setText("<html>"+desc+"<br>ГЌГҐГ¤Г®Г±ГІГ ГІГ®Г·Г­Г»Г© ГіГ°Г®ГўГҐГ­Гј Г­Г ГўГ»ГЄГ .</html>");
 			}
 			else{
 				gameX.inMessage=3;
 				gameX.mes.setVisible(true);
 				gameX.head.setVisible(true);
 				gameX.textField.setVisible(false);
-				gameX.head.setText("Создание парных клинков");
-				gameX.mes.setText("<html>"+desc+"<br>Чтобы создать парные клинки, нужны два меча того же уровня</html>");
+				gameX.head.setText("Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЇГ Г°Г­Г»Гµ ГЄГ«ГЁГ­ГЄГ®Гў");
+				gameX.mes.setText("<html>"+desc+"<br>Г—ГІГ®ГЎГ» Г±Г®Г§Г¤Г ГІГј ГЇГ Г°Г­Г»ГҐ ГЄГ«ГЁГ­ГЄГЁ, Г­ГіГ¦Г­Г» Г¤ГўГ  Г¬ГҐГ·Г  ГІГ®ГЈГ® Г¦ГҐ ГіГ°Г®ГўГ­Гї</html>");
 			}
 		}
 		damage();
