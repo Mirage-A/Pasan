@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -55,8 +56,8 @@ public class menu extends JFrame{
 					gameP.mes.setVisible(true);
 					gameP.head.setVisible(true);
 					gameP.textField.setVisible(true);
-					gameP.head.setText("Выбор уровня");
-					gameP.mes.setText("Введите название уровня:");
+					gameP.head.setText("Г‚Г»ГЎГ®Г° ГіГ°Г®ГўГ­Гї");
+					gameP.mes.setText("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГіГ°Г®ГўГ­Гї:");
 					gameP.textField.setText("");
 					gameP.textField.requestFocus();
 					gameP.textField.addKeyListener(keylis1);
@@ -66,8 +67,8 @@ public class menu extends JFrame{
 					gameP.mes.setVisible(true);
 					gameP.head.setVisible(true);
 					gameP.textField.setVisible(true);
-					gameP.head.setText("Редактор карт");
-					gameP.mes.setText("Введите название карты:");
+					gameP.head.setText("ГђГҐГ¤Г ГЄГІГ®Г° ГЄГ Г°ГІ");
+					gameP.mes.setText("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГЄГ Г°ГІГ»:");
 					gameP.textField.setText("");
 					gameP.textField.requestFocus();
 					gameP.textField.addKeyListener(keylis2);
@@ -180,10 +181,10 @@ public class menu extends JFrame{
 						
 		        int key = e.getKeyCode();
 				        
-		        if (key == 10) {		// нажата клавиша - Enter
+		        if (key == 10) {		// Г­Г Г¦Г ГІГ  ГЄГ«Г ГўГЁГёГ  - Enter
 		        	name=gameP.textField.getText().trim();
 					if(name.length()==0){
-						name="Без имени";
+						name="ГЃГҐГ§ ГЁГ¬ГҐГ­ГЁ";
 					}
 					 map = new File("./Pasan_UserMaps/"+name+".pasan");
 					
@@ -197,8 +198,8 @@ public class menu extends JFrame{
 							gameP.mes.setVisible(true);
 							gameP.head.setVisible(true);
 							gameP.textField.setVisible(false);
-							gameP.head.setText("Ошибка");
-							gameP.mes.setText("Уровень с таким именем не найден");
+							gameP.head.setText("ГЋГёГЁГЎГЄГ ");
+							gameP.mes.setText("Г“Г°Г®ГўГҐГ­Гј Г± ГІГ ГЄГЁГ¬ ГЁГ¬ГҐГ­ГҐГ¬ Г­ГҐ Г­Г Г©Г¤ГҐГ­");
 							requestFocus();
 							gameP.textField.removeKeyListener(keylis1);
 				        }
@@ -226,7 +227,7 @@ public class menu extends JFrame{
 		        if (key == 10) {
 		        	name=gameP.textField.getText().trim();
 					if(name.length()==0){
-						name="Без имени";
+						name="ГЃГҐГ§ ГЁГ¬ГҐГ­ГЁ";
 					}
 					 map = new File("./Pasan_UserMaps/"+name+".pasan");
 					 try{
@@ -243,8 +244,8 @@ public class menu extends JFrame{
 							gameP.head.setVisible(true);
 							gameP.textField.setVisible(false);
 							
-							gameP.head.setText("Редактор карт");
-							gameP.mes.setText("<html>Карта с таким именем уже существует.<br>Открыть её для редактирования?</html>");
+							gameP.head.setText("ГђГҐГ¤Г ГЄГІГ®Г° ГЄГ Г°ГІ");
+							gameP.mes.setText("<html>ГЉГ Г°ГІГ  Г± ГІГ ГЄГЁГ¬ ГЁГ¬ГҐГ­ГҐГ¬ ГіГ¦ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ.<br>ГЋГІГЄГ°Г»ГІГј ГҐВё Г¤Г«Гї Г°ГҐГ¤Г ГЄГІГЁГ°Г®ГўГ Г­ГЁГї?</html>");
 							requestFocus();
 							gameP.textField.removeKeyListener(keylis2);
 				        }
