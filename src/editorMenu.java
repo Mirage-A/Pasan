@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
