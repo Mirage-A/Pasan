@@ -1,3 +1,4 @@
+// I wrote this game ~2 years ago, so pls dont look source code unless you want your eyes to bleed :)
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -67,9 +68,9 @@ public class pole extends JPanel{
 	int exp;
 	boolean stop=false;
 	boolean ram=true;
-	int animation=0;//Êîë-âî àíèìàöèé
-	int anima=1; //Àíèìàöèÿ â äàííûé ìîìåíò
-	int[][] anim = new int[100][5];//0 - äâèæåíèå, 1 - ñòðåëà, 2 - ôàåðáîë, 3 - ëåäÿíûå îáúÿòüÿ, 4 - âûñîêîå íàïðÿæåíèå; 1 - íà÷àëüíàÿ òî÷êà, 2 - êîíå÷íàÿ òî÷êà
+	int animation=0;//ÃŠÃ®Ã«-Ã¢Ã® Ã Ã­Ã¨Ã¬Ã Ã¶Ã¨Ã©
+	int anima=1; //Ã€Ã­Ã¨Ã¬Ã Ã¶Ã¨Ã¿ Ã¢ Ã¤Ã Ã­Ã­Ã»Ã© Ã¬Ã®Ã¬Ã¥Ã­Ã²
+	int[][] anim = new int[100][5];//0 - Ã¤Ã¢Ã¨Ã¦Ã¥Ã­Ã¨Ã¥, 1 - Ã±Ã²Ã°Ã¥Ã«Ã , 2 - Ã´Ã Ã¥Ã°Ã¡Ã®Ã«, 3 - Ã«Ã¥Ã¤Ã¿Ã­Ã»Ã¥ Ã®Ã¡ÃºÃ¿Ã²Ã¼Ã¿, 4 - Ã¢Ã»Ã±Ã®ÃªÃ®Ã¥ Ã­Ã Ã¯Ã°Ã¿Ã¦Ã¥Ã­Ã¨Ã¥; 1 - Ã­Ã Ã·Ã Ã«Ã¼Ã­Ã Ã¿ Ã²Ã®Ã·ÃªÃ , 2 - ÃªÃ®Ã­Ã¥Ã·Ã­Ã Ã¿ Ã²Ã®Ã·ÃªÃ 
 	public String[][] lol = new String[15][10];
 	public int[][] health = new int[15][10];
 	public int[][] maxhealth = new int[15][10];
@@ -328,8 +329,8 @@ public class pole extends JPanel{
 		}
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		if(animation>0){
-			if(anim[anima][0]==0){ // Äâèæåíèå
-				if(anim[anima][1]==0){//Âëåâî
+			if(anim[anima][0]==0){ // Ã„Ã¢Ã¨Ã¦Ã¥Ã­Ã¨Ã¥
+				if(anim[anima][1]==0){//Ã‚Ã«Ã¥Ã¢Ã®
 						gr.drawImage(Enemy,klStart+((anim[anima][2]-1)-(anim[anima][2]-1)/15*15)*klX+(anim[anima][2]-(anim[anima][2]-1))*(10-arrowpos)*klX/10,(anim[anima][2]-1)/15*klY,null);
 						xx=(anim[anima][2]-1)-(anim[anima][2]-1)/15*15;
 						yy=(anim[anima][2]-1)/15;
@@ -338,7 +339,7 @@ public class pole extends JPanel{
 						gr.drawImage(Health,5+klStart+((anim[anima][2]-1)-(anim[anima][2]-1)/15*15)*klX+(anim[anima][2]-(anim[anima][2]-1))*(10-arrowpos)*klX/10,5+(anim[anima][2]-1)/15*klY,(klX-10)*health[xx+1][yy]/maxhealth[xx+1][yy], 5,null);
 						arrowpos+=1;
 				}
-				else if(anim[anima][1]==1){//Âïðàâî
+				else if(anim[anima][1]==1){//Ã‚Ã¯Ã°Ã Ã¢Ã®
 						gr.drawImage(Enemy,klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+((anim[anima][2]+1)-anim[anima][2])*arrowpos*klX/10,anim[anima][2]/15*klY,null);
 						xx=(anim[anima][2]+1)-(anim[anima][2]+1)/15*15;
 						yy=(anim[anima][2]+1)/15;
@@ -347,7 +348,7 @@ public class pole extends JPanel{
 						gr.drawImage(Health,5+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+((anim[anima][2]+1)-anim[anima][2])*arrowpos*klX/10,5+anim[anima][2]/15*klY,(klX-10)*health[xx-1][yy]/maxhealth[xx-1][yy], 5,null);
 						arrowpos+=1;
 				}
-				else if(anim[anima][1]==2){//Ââåðõ
+				else if(anim[anima][1]==2){//Ã‚Ã¢Ã¥Ã°Ãµ
 						gr.drawImage(Enemy,klStart+((anim[anima][2]-15)-(anim[anima][2]-15)/15*15)*klX,(anim[anima][2]-15)/15*klY+(anim[anima][2]-(anim[anima][2]-15))/15*klY*(10-arrowpos)/10,null);
 						xx=(anim[anima][2]-15)-(anim[anima][2]-15)/15*15;
 						yy=(anim[anima][2]-15)/15;
@@ -356,7 +357,7 @@ public class pole extends JPanel{
 						gr.drawImage(Health,5+klStart+((anim[anima][2]-15)-(anim[anima][2]-15)/15*15)*klX,5+(anim[anima][2]-15)/15*klY+(anim[anima][2]-(anim[anima][2]-15))/15*klY*(10-arrowpos)/10,(klX-10)*health[xx][yy+1]/maxhealth[xx][yy+1], 5,null);
 						arrowpos+=1;
 				}
-				else if(anim[anima][1]==3){//Âíèç
+				else if(anim[anima][1]==3){//Ã‚Ã­Ã¨Ã§
 					gr.drawImage(Enemy,klStart+((anim[anima][2]+15)-(anim[anima][2]+15)/15*15)*klX,anim[anima][2]/15*klY+((anim[anima][2]+15)-anim[anima][2])/15*arrowpos*klY/10,null);
 						xx=(anim[anima][2]+15)-(anim[anima][2]+15)/15*15;
 						yy=(anim[anima][2]+15)/15;
@@ -411,8 +412,8 @@ public class pole extends JPanel{
 			/////////////////////////////////
 			
 		else if(anim[anima][0]==1){
-			if(anim[anima][1]>anim[anima][2]){//Âëåâî èëè ââåðõ
-				if(anim[anima][1]-anim[anima][2]>=15){//Ââåðõ
+			if(anim[anima][1]>anim[anima][2]){//Ã‚Ã«Ã¥Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã¢Ã¥Ã°Ãµ
+				if(anim[anima][1]-anim[anima][2]>=15){//Ã‚Ã¢Ã¥Ã°Ãµ
 					if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 					gr.drawImage(arrowup,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][2]/15*klY+(anim[anima][1]-anim[anima][2])/15*klY*(10-arrowpos)/10,null);
 					}
@@ -421,7 +422,7 @@ public class pole extends JPanel{
 					}
 					arrowpos+=1;
 				}
-				else{//Âëåâî
+				else{//Ã‚Ã«Ã¥Ã¢Ã®
 					if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 					gr.drawImage(arrowleft,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+(anim[anima][1]-anim[anima][2])*(10-arrowpos)*klX/10,klY/4+anim[anima][2]/15*klY,null);
 					}
@@ -431,8 +432,8 @@ public class pole extends JPanel{
 					arrowpos+=1;
 				}
 			}
-			else if(anim[anima][2]>anim[anima][1]){//Âïðàâî èëè âíèç
-				if(anim[anima][2]-anim[anima][1]>=15){//Âíèç
+			else if(anim[anima][2]>anim[anima][1]){//Ã‚Ã¯Ã°Ã Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã­Ã¨Ã§
+				if(anim[anima][2]-anim[anima][1]>=15){//Ã‚Ã­Ã¨Ã§
 					if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 					gr.drawImage(arrowdown,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][1]/15*klY+(anim[anima][2]-anim[anima][1])/15*arrowpos*klY/10,null);
 					}
@@ -441,7 +442,7 @@ public class pole extends JPanel{
 						}
 					arrowpos+=1;
 				}
-				else{//Âïðàâî
+				else{//Ã‚Ã¯Ã°Ã Ã¢Ã®
 					if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 					gr.drawImage(arrowright,klX/4+klStart+(anim[anima][1]-anim[anima][1]/15*15)*klX+(anim[anima][2]-anim[anima][1])*arrowpos*klX/10,klY/4+anim[anima][1]/15*klY,null);
 					}
@@ -465,24 +466,24 @@ public class pole extends JPanel{
 			
 		}
 				else if(anim[anima][0]==2){
-					if(anim[anima][1]>anim[anima][2]){//Âëåâî èëè ââåðõ
-						if(anim[anima][1]-anim[anima][2]>=15){//Ââåðõ
+					if(anim[anima][1]>anim[anima][2]){//Ã‚Ã«Ã¥Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã¢Ã¥Ã°Ãµ
+						if(anim[anima][1]-anim[anima][2]>=15){//Ã‚Ã¢Ã¥Ã°Ãµ
 							
 							gr.drawImage(fireballup,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][2]/15*klY+(anim[anima][1]-anim[anima][2])/15*klY*(10-arrowpos)/10,null);
 							
 							arrowpos+=1;
 						}
-						else{//Âëåâî
+						else{//Ã‚Ã«Ã¥Ã¢Ã®
 							gr.drawImage(fireballleft,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+(anim[anima][1]-anim[anima][2])*(10-arrowpos)*klX/10,klY/4+anim[anima][2]/15*klY,null);
 							arrowpos+=1;
 						}
 					}
-					else if(anim[anima][2]>anim[anima][1]){//Âïðàâî èëè âíèç
-						if(anim[anima][2]-anim[anima][1]>=15){//Âíèç
+					else if(anim[anima][2]>anim[anima][1]){//Ã‚Ã¯Ã°Ã Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã­Ã¨Ã§
+						if(anim[anima][2]-anim[anima][1]>=15){//Ã‚Ã­Ã¨Ã§
 							gr.drawImage(fireballdown,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][1]/15*klY+(anim[anima][2]-anim[anima][1])/15*arrowpos*klY/10,null);
 							arrowpos+=1;
 						}
-						else{//Âïðàâî
+						else{//Ã‚Ã¯Ã°Ã Ã¢Ã®
 							gr.drawImage(fireballright,klX/4+klStart+(anim[anima][1]-anim[anima][1]/15*15)*klX+(anim[anima][2]-anim[anima][1])*arrowpos*klX/10,klY/4+anim[anima][1]/15*klY,null);
 							arrowpos+=1;
 						}
@@ -544,7 +545,7 @@ public class pole extends JPanel{
 						arrowpos=0;
 					}
 				}
-				else if(anim[anima][0]==5){ // Ïðîìàõ
+				else if(anim[anima][0]==5){ // ÃÃ°Ã®Ã¬Ã Ãµ
 					gr.drawImage(Miss,klStart+anim[anima][1]*klX,anim[anima][2]*klY,null);
 					arrowpos+=1;
 					if(arrowpos>=10){
@@ -553,7 +554,7 @@ public class pole extends JPanel{
 						arrowpos=0;
 					}
 				}
-				else if(anim[anima][0]==6){ // Êðèò
+				else if(anim[anima][0]==6){ // ÃŠÃ°Ã¨Ã²
 					gr.drawImage(Crit,klStart+anim[anima][1]*klX,anim[anima][2]*klY,null);
 					arrowpos+=1;
 					if(arrowpos>=10){
@@ -562,7 +563,7 @@ public class pole extends JPanel{
 						arrowpos=0;
 					}
 				}
-				else if(anim[anima][0]==7){ // Ñìåðòåëüíûé óäàð
+				else if(anim[anima][0]==7){ // Ã‘Ã¬Ã¥Ã°Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã³Ã¤Ã Ã°
 					gr.drawImage(Deathstrike,klStart+anim[anima][1]*klX,anim[anima][2]*klY,null);
 					arrowpos+=1;
 					if(arrowpos>=10){
@@ -571,9 +572,9 @@ public class pole extends JPanel{
 						arrowpos=0;
 					}
 				}
-				else if(anim[anima][0]==8){ // Òû÷êà ìå÷îì
-					if(anim[anima][1]>anim[anima][2]){//Âëåâî èëè ââåðõ
-						if(anim[anima][1]-anim[anima][2]>=15){//Ââåðõ
+				else if(anim[anima][0]==8){ // Ã’Ã»Ã·ÃªÃ  Ã¬Ã¥Ã·Ã®Ã¬
+					if(anim[anima][1]>anim[anima][2]){//Ã‚Ã«Ã¥Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã¢Ã¥Ã°Ãµ
+						if(anim[anima][1]-anim[anima][2]>=15){//Ã‚Ã¢Ã¥Ã°Ãµ
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordup,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][2]/15*klY+(anim[anima][1]-anim[anima][2])/15*klY*(10-arrowpos)/10,null);
 							}
@@ -582,7 +583,7 @@ public class pole extends JPanel{
 							}
 							arrowpos+=1;
 						}
-						else{//Âëåâî
+						else{//Ã‚Ã«Ã¥Ã¢Ã®
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordleft,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+(anim[anima][1]-anim[anima][2])*(10-arrowpos)*klX/10,klY/4+anim[anima][2]/15*klY,null);
 							}
@@ -592,8 +593,8 @@ public class pole extends JPanel{
 							arrowpos+=1;
 						}
 					}
-					else if(anim[anima][2]>anim[anima][1]){//Âïðàâî èëè âíèç
-						if(anim[anima][2]-anim[anima][1]>=15){//Âíèç
+					else if(anim[anima][2]>anim[anima][1]){//Ã‚Ã¯Ã°Ã Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã­Ã¨Ã§
+						if(anim[anima][2]-anim[anima][1]>=15){//Ã‚Ã­Ã¨Ã§
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(sworddown,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][1]/15*klY+(anim[anima][2]-anim[anima][1])/15*arrowpos*klY/10,null);
 							}
@@ -602,7 +603,7 @@ public class pole extends JPanel{
 								}
 							arrowpos+=1;
 						}
-						else{//Âïðàâî
+						else{//Ã‚Ã¯Ã°Ã Ã¢Ã®
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordright,klX/4+klStart+(anim[anima][1]-anim[anima][1]/15*15)*klX+(anim[anima][2]-anim[anima][1])*arrowpos*klX/10,klY/4+anim[anima][1]/15*klY,null);
 							}
@@ -624,9 +625,9 @@ public class pole extends JPanel{
 					
 					
 				}
-				else if(anim[anima][0]==9){ // Òû÷êà äóàëàìè
-					if(anim[anima][1]>anim[anima][2]){//Âëåâî èëè ââåðõ
-						if(anim[anima][1]-anim[anima][2]>=15){//Ââåðõ
+				else if(anim[anima][0]==9){ // Ã’Ã»Ã·ÃªÃ  Ã¤Ã³Ã Ã«Ã Ã¬Ã¨
+					if(anim[anima][1]>anim[anima][2]){//Ã‚Ã«Ã¥Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã¢Ã¥Ã°Ãµ
+						if(anim[anima][1]-anim[anima][2]>=15){//Ã‚Ã¢Ã¥Ã°Ãµ
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordup,klX/6+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][2]/15*klY+(anim[anima][1]-anim[anima][2])/15*klY*(10-arrowpos)/10,null);
 							gr.drawImage(swordup,klX/3+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][2]/15*klY+(anim[anima][1]-anim[anima][2])/15*klY*(10-arrowpos)/10,null);
@@ -637,7 +638,7 @@ public class pole extends JPanel{
 							}
 							arrowpos+=1;
 						}
-						else{//Âëåâî
+						else{//Ã‚Ã«Ã¥Ã¢Ã®
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordleft,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+(anim[anima][1]-anim[anima][2])*(10-arrowpos)*klX/10,klY/6+anim[anima][2]/15*klY,null);
 							gr.drawImage(swordleft,klX/4+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX+(anim[anima][1]-anim[anima][2])*(10-arrowpos)*klX/10,klY/3+anim[anima][2]/15*klY,null);
@@ -649,8 +650,8 @@ public class pole extends JPanel{
 							arrowpos+=1;
 						}
 					}
-					else if(anim[anima][2]>anim[anima][1]){//Âïðàâî èëè âíèç
-						if(anim[anima][2]-anim[anima][1]>=15){//Âíèç
+					else if(anim[anima][2]>anim[anima][1]){//Ã‚Ã¯Ã°Ã Ã¢Ã® Ã¨Ã«Ã¨ Ã¢Ã­Ã¨Ã§
+						if(anim[anima][2]-anim[anima][1]>=15){//Ã‚Ã­Ã¨Ã§
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(sworddown,klX/6+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][1]/15*klY+(anim[anima][2]-anim[anima][1])/15*arrowpos*klY/10,null);
 							gr.drawImage(sworddown,klX/3+klStart+(anim[anima][2]-anim[anima][2]/15*15)*klX,klY/4+anim[anima][1]/15*klY+(anim[anima][2]-anim[anima][1])/15*arrowpos*klY/10,null);
@@ -661,7 +662,7 @@ public class pole extends JPanel{
 								}
 							arrowpos+=1;
 						}
-						else{//Âïðàâî
+						else{//Ã‚Ã¯Ã°Ã Ã¢Ã®
 							if((magic<10)|(Integer.parseInt(lol[anim[anima][1]-anim[anima][1]/15*15][anim[anima][1]/15])!=0)){
 							gr.drawImage(swordright,klX/4+klStart+(anim[anima][1]-anim[anima][1]/15*15)*klX+(anim[anima][2]-anim[anima][1])*arrowpos*klX/10,klY/6+anim[anima][1]/15*klY,null);
 							gr.drawImage(swordright,klX/4+klStart+(anim[anima][1]-anim[anima][1]/15*15)*klX+(anim[anima][2]-anim[anima][1])*arrowpos*klX/10,klY/3+anim[anima][1]/15*klY,null);
