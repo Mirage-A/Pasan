@@ -1,4 +1,2 @@
 # Pasan
-Well, if u want to try this, download and unarchive this repository and run pasan.jar with Java
-
-I wrote this game ~2 years ago, so pls don't look source code unless u want your eyes to bleed :)
+To try this game, download and unarchive this repository (or just clone it) and run pasan.jar with Java
