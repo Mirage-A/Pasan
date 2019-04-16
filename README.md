@@ -3,5 +3,6 @@
 ### Команды для установки на убунту:
     sudo apt install default-jre
     git clone https://github.com/Mirage-A/Pasan
-    java -jar ./Pasan/pasan.jar
+    cd ./Pasan
+    java -jar ./pasan.jar
 Ну или можно просто скачать этот репозиторий, разархивировать его и запустить pasan.jar через Java.
