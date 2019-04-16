@@ -4,3 +4,4 @@
     sudo apt install default-jre
     git clone https://github.com/Mirage-A/Pasan
     java -jar ./Pasan/pasan.jar
+Ну или можно просто скачать этот репозиторий, разархивировать его и запустить pasan.jar через Java.
